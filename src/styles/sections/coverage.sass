@@ -1,0 +1,223 @@
+
+.coverage
+    background-image: url(../img/coverage_map.png)
+    background-repeat: no-repeat
+    background-position: center center
+    background-color: #262626
+    background-size: contain
+    overflow: hidden
+    position: relative
+    &:before
+        position: absolute
+        top: 0px
+        left: 0px
+        content: ''
+        width: 100%
+        height: 100%
+        background: url(../img/noise.png) no-repeat center center
+        background-size: cover
+        z-index: 1
+    +res('tam')
+        background-position: center 0
+    &--about
+        .coverage__content
+            padding-top: 84px
+            +res('mob')
+                padding-top: 110px
+        .coverage__title
+            margin-bottom: 27px
+            color: #fff
+            +res('mob')
+                margin-bottom: 15px
+    &__title_wrap
+        width: 480px
+        max-width: 50%
+        margin-bottom: 94px
+        +res('tam')
+            margin-bottom: 90px
+        +res('mob')
+            width: 300px
+            max-width: 100%
+            margin-bottom: 42px
+    &__content
+        padding: 332px 0 78px
+        position: relative
+        +res('tam')
+            padding: 332px 0 30px
+        +res('mob')
+            padding: 245px 0 35px
+    &__link
+        right: 46px
+        top: 98px
+        position: absolute
+        a
+            .hover
+                color: #fff
+                svg
+                    stroke: #fff
+
+        +res('mob')
+            top: 48px
+            right: auto
+            left: 0
+    &__items
+        +flex(row, wrap, flex-start, stretch)
+        .slick-dots
+            text-align: center
+            margin: 0
+            li.slick-active button:before
+                color: #fff
+    &__item
+        width: calc(100% / 4)
+        margin-bottom: 20px
+        position: relative
+        border: 1px solid transparent
+        padding: 0 62px 6px
+        overflow: hidden
+        &:before, &:after
+            width: 0
+            transform: translateZ(0)
+            border-right: 1px solid #fff
+            height: 100%
+            background-color: #ffffff
+            position: absolute
+            top: 0
+            left: 0
+            content: ''
+            opacity: .1
+        &:after
+            right: 0
+            left: auto
+            display: none
+        &:last-child
+            &:after
+                display: block
+        +res('desk-min')
+            &:nth-child(4n + 4)
+                &:after
+                    display: block
+        +res('tam')
+            width: calc(100% / 3)
+            padding: 0 40px 6px
+            &:nth-child(3n + 3)
+                &:after
+                    display: block
+        +res('mob')
+            padding: 0 10px 6px
+            &:after, &:nth-child(3n + 3):after
+                display: none
+            &:nth-child(2n + 2)
+                &:after
+                    display: block
+        h3
+            color: #ffffff
+            font: 36px $light
+            line-height: 44px
+            margin-bottom: 8px
+        p
+            color: #ffffff
+            font: 11px $light
+            line-height: 20px
+            letter-spacing: 0.5px
+            width: 160px
+            max-width: 100%
+    &__description
+        .uikit__large_title
+            width: auto
+        h3
+            color: #fff
+            margin-bottom: 28px
+            +res('mob')
+                margin-bottom: 15px
+        p
+            +res('mob')
+                line-height: 20px
+    p
+        color: #fff
+    &__flex
+        +flex(row, nowrap, space-between, stretch)
+        position: relative
+        margin: 0 -15px 12px
+        & > div
+            flex: 0 1 580px
+            padding: 0 15px
+        +res('tam')
+            flex-wrap: wrap
+            & > div
+                flex: 0 0 100%
+        +res('mob')
+            margin-bottom: 10px
+    &__progress
+        +res('tam')
+            margin-top: 28px
+        +res('tam')
+            margin-top: 36px
+        p
+            margin-top: 20px
+            +res('mob')
+                line-height: 20px
+        .list
+            +flex(row, nowrap, space-between, stretch)
+            margin-bottom: 36px
+            +res('mob')
+                margin-bottom: 60px
+            &__item
+                color: $green
+                font: 11px $reg
+                letter-spacing: 0.5px
+                line-height: 20px
+                position: relative
+                padding-right: 15px
+                +res('mob')
+                    padding-right: 0
+                span
+                    display: block
+                    position: absolute
+                    top: 100%
+                    width: 100%
+                    left: 0
+                    white-space: nowrap
+                    +res('mob')
+                        white-space: normal
+                strong
+                    font: 50px $light
+                    display: block
+                    line-height: 48px
+                    letter-spacing: normal
+                    margin-top: 7px
+                    //margin-bottom: -10px
+                    +res('mob')
+                        margin-top: 0
+                        font-size: 36px
+                        line-height: 48px
+                        margin-bottom: 5px
+            &__separate
+                padding: 0 22px 0 7px
+                +flex(row, nowrap, space-between, center)
+                flex: 0 1 115px
+                +res('mob')
+                    display: none
+                i
+                    width: 6px
+                    height: 6px
+                    background: $green
+                    border-radius: 50%
+    &__separate_wrap
+        margin-top: 18px
+        padding-top: 5px
+        position: relative
+        &:after
+            width: 1px
+            height: 100%
+            background-color: #ffffff
+            position: absolute
+            left: 50%
+            top: 0px
+            content: ''
+            opacity: .2
+        +res('tam')
+            margin-top: -10px
+            &:after
+                display: none
+        +res('mob')
+            margin-top: 6px

@@ -1,0 +1,83 @@
+.director
+    background-size: cover
+    background-position: center 60%
+    padding: 220px 0 97px
+    position: relative
+    +res('mob')
+        padding: 10% 0
+    @media screen and (max-width: 500px)
+        padding: 17px 0 15px
+    +res('tam')
+        padding: 60px 0 25px
+    .drawn_text__balls
+        top: -30px
+        +res('mob')
+            height: 110px
+            top: 0
+    .container
+        position: relative
+        z-index: 2
+    &:before
+        background-color: #000000
+        opacity: 0.1
+        position: absolute
+        top: 0px
+        content: ''
+        left: 0px
+        width: 100%
+        height: 100%
+        z-index: 1
+    &__mob_description
+        display: none
+        padding: 13px 0 45px
+        color: #262626
+        background: #ffffff
+        p
+            font: 11px $light
+            line-height: 20px
+        h2
+            font: 36px $light
+            margin-bottom: 15px
+        +res('mob')
+            display: block
+    &__bottom
+        position: relative
+        margin-top: 15px
+        width: 660px
+        max-width: 100%
+        margin-left: auto
+        +res('tam')
+            margin-left: 0
+            width: 100%
+        +res('mob')
+            margin-top: 0
+    &__text
+        margin-left: 180px
+        padding: 17px 0 18px
+
+        letter-spacing: .3px
+        p
+            color: #ffffff
+        +res('mob')
+            display: none
+    &__title
+        color: #ffffff
+        font: 100px $ulight
+        line-height: 100px
+        position: relative
+        margin-left: -.08em
+        +res('mob')
+            .drawn_text__overflow
+                display: none
+    .circle_play
+        position: absolute
+        top: 50%
+        margin-top: -56px
+        +res('mob')
+            position: relative
+            margin: 0
+        circle
+            fill: #262626
+    &__content
+        width: 855px
+        max-width: 100%

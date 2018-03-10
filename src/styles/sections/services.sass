@@ -1,0 +1,97 @@
+.services
+    padding: 87px 0 0
+    +res('mob')
+        padding: 45px 0 0
+    &__title
+        margin-bottom: 13px
+        +res('tam')
+            margin-bottom: 30px
+        +res('mob')
+            margin-bottom: 20px
+    &__list
+        font: 16px $light
+        letter-spacing: .3px
+        color: $green
+        +flex(row, wrap, flex-start, flex-start)
+        margin: 0 -25px
+        line-height: 26px
+        li
+            margin: 5px 25px
+    &__description
+        margin: 0 -15px
+        +flex(row, nowrap, space-between, flex-start)
+        padding-bottom: 90px
+        +res('tam')
+            display: block
+        +res('mob')
+            padding-bottom: 42px
+        .desc_item
+            width: 565px
+            flex-shrink: 1
+            padding: 0 15px
+            font: 18px $light
+            line-height: 34px
+            +res('tam')
+                width: 100%
+                margin-bottom: 40px
+                &:last-child
+                    margin-bottom: 0
+            +res('mob')
+                font-size: 11px
+                line-height: 20px
+                margin-bottom: 20px
+                &:last-child
+                    margin-bottom: 0
+                strong
+                    font: inherit
+            strong
+                font-size: 26px
+                color: $green
+                font-weight: normal
+                line-height: 34px
+    &__row
+        background: #fff
+        &:nth-child(odd)
+            background: #f2f2f2
+    &__container
+        +flex(row, wrap, flex-start, stretch)
+        width: 1920px
+        max-width: 100%
+        margin: 0 auto
+    &__img
+        width: 448px
+        min-height: 335px
+        position: relative
+        +res('tam')
+            display: none
+        .img
+            position: absolute
+            top: 0px
+            left: 0px
+            width: 100%
+            height: 100%
+            overflow: hidden
+        +cover-video
+        +cover-img
+            display: block
+    &__item_right
+        //width: 65%
+        width: calc(100% - 448px)
+        padding: 42px 50px 32px
+        +res('tam')
+            width: 100%
+            padding: 42px 30px 32px
+        +res('mob')
+            padding: 40px 10px 42px
+    &__text
+        margin-bottom: 28px
+        +res('mob')
+            margin-bottom: 32px
+        h3
+            color: $green
+            margin-bottom: 29px
+            +res('mob')
+                font-size: 34px
+                font-weight: 300
+                line-height: 48px
+                margin-bottom: 12px

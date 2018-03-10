@@ -1,0 +1,20 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 40 40" style="enable-background:new 0 0 40 40;" xml:space="preserve">
+<style type="text/css">
+	.adv_ico .st0{fill:#06C160;}
+	.adv_ico .st1{fill:none;stroke:#222222;stroke-width:2;stroke-miterlimit:10;}
+</style>
+    <g class="adv_ico">
+<g>
+	<circle class="st0" cx="19" cy="29.3" r="1.4"/>
+</g>
+<g>
+	<circle class="st0" cx="19" cy="20.8" r="1.4"/>
+</g>
+<g>
+	<circle class="st0" cx="19" cy="11.9" r="1.4"/>
+</g>
+<path class="st1" d="M36,10.2c-6.6,0-12,5.5-12,12.1V31"/>
+<path class="st1" d="M2,10.2c6.6,0,12,5.5,12,12.1V31"/>
+    </g>
+</svg>

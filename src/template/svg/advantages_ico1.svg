@@ -1,0 +1,15 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 40 40" style="enable-background:new 0 0 40 40;" xml:space="preserve">
+<style type="text/css">
+	.adv_ico .st0{fill:#06C160;}
+	.adv_ico .st1{fill:none;stroke:#222222;stroke-width:2;stroke-miterlimit:10;}
+</style>
+<g class="adv_ico">
+<circle class="st0" cx="31.1" cy="13.1" r="1.4"/>
+	<circle class="st0" cx="31.1" cy="22" r="1.4"/>
+	<circle class="st0" cx="31.1" cy="30.9" r="1.4"/>
+	<polyline class="st1" points="10,6 10,31 27,31 	"/>
+	<line class="st1" x1="10" y1="13" x2="27" y2="13"/>
+	<line class="st1" x1="10" y1="22" x2="27" y2="22"/>
+</g>
+</svg>

@@ -1,0 +1,24 @@
+extends ../extend/default
+
+block variables
+    - var title = 'Not found';
+block header
+block main
+    include ../partials/_preloader
+    main.content(data-page='Not found')
+        +header()
+        section.not_found.fullscreen
+            .container
+                .fullscreen__content
+                    .not_found__icon
+                        .not_found__item
+                            +svg('404')
+                    .not_found__text
+                        .not_found__item
+                            h3 Page not found
+                            p.uikit__paragraph The page you’re trying to reach doesn’t exist
+                    .not_found__button
+                        .not_found__item
+                            a(href='home.html').rect_btn.rect_btn--green
+                                span home page
+                                .rect_btn__balls(data-color='#3db565')

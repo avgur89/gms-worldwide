@@ -1,0 +1,120 @@
+extends ../extend/default
+
+block variables
+    - var title = 'Contact';
+block header
+block main
+    include ../partials/_preloader
+    main.content(data-page='operators')
+        +header('always_white')
+        section.contact_main
+            .container
+                .uikit__large_title.contact_main__title.mad_title
+                    h2 Contacts
+                .contact_main__items
+                    .contact_main__item
+                        h3.uikit__title GMS Headquarters
+                        .contact_main__row
+                            .contact_main__col
+                                p.uikit__paragraph Global Message Services AG
+                                p.uikit__paragraph Bundesstrasse 5
+                                p.uikit__paragraph CH-6300 Zug
+                                p.uikit__paragraph Switzerland
+                                a.contact_main__tel(href='tel:+41415446200') +41 41 544 62 00
+                            .contact_main__col
+                                ul
+                                    li
+                                        h5.uikit__paragraph Email
+                                        a(href='mailto:info@gms-worldwide.com') info@gms-worldwide.com
+                                    li
+                                        h5.uikit__paragraph Send message
+                                        a(href='#') viber us
+                                    li
+                                        h5.uikit__paragraph Send form
+                                        a(href='#') Contact us
+                    .contact_main__item.contact_main__item--right
+                        h3.uikit__title Technical support #[strong 24/7]
+                        p.uikit__paragraph A team of qualified technical specialists is working on GMS` network 24/7. They provide round-the-clock customer support, as well as monitor the network non-stop, promptly notifying you of any irregularities in the connections.
+                        a.contact_main__tel(href='tel:+41415446206') +41 41 544 62 06
+        section.contact_map
+            .contact_map__slider
+               .contact_map__slide
+                   .pin
+               .contact_map__slide
+                   .pin
+               .contact_map__slide
+                   .pin
+               .contact_map__slide
+                   .pin
+            .container
+                .contact_map__title
+                    h3.uikit__title Our Offices
+                .contact_map__select
+                    select
+                        option(value='Switzerland', selected='') Switzerland
+                        option(value='Ukraine') Ukraine
+                        option(value='Russia') Russia
+                        option(value='Pakistan') Pakistan
+                    ul
+                        li(class='active') Switzerland
+                        li Ukraine
+                        li Russia
+                        li Pakistan
+                .contact_form__descriptions
+                    div
+                        h4 Global Message Services AG
+                        .contact_map__bottom.uikit__paragraph
+                            p Schochenmühlestrasse 2 | 3rd Floor
+                            p 6340 Baar
+                            p Switzerland
+                    div
+                        h4 Global Message Services Ukraine LLC
+                        .contact_map__bottom.uikit__paragraph
+                            p Eurasia Business Center
+                            p Zhylianska Street 75 | 8th Floor
+                            p 01032 Kyiv
+                            p Ukraine
+                    div
+                        .contact_map__bottom.uikit__paragraph
+                            p White Stone Business Centre
+                            p 4th Lesnoy lane | Building 4 | 4th Floor
+                            p 125047 Moscow
+                            p Russia
+                    div
+                        .contact_map__bottom.uikit__paragraph
+                            p Manzoor Plaza | Plot № 14-E | 1st Floor
+                            p Fazl-e- Haq Road, Blue Area
+                            p 44000 Islamabad
+                            p Pakistan
+        section.contact_form
+            .contact_form__convex_particles
+            .container
+                .contact_form__title
+                    h3.uikit__title Contact Us
+                form
+                    .contact_form__items
+                        .contact_form__item
+                            .form-group.form_item.input_wrap.has-success
+                                label(for='input1') Name
+                                input(id='input1')
+                                .help-block write correct name
+                            .form-group.form_item.input_wrap.has-error
+                                label(for='input2') Phone
+                                input(id='input2')
+                                .help-block write correct phone
+                            .form-group.form_item.input_wrap
+                                label(for='input3') E-mail
+                                input(id='input3')
+                                .help-block write correct e-mail
+                        .contact_form__item
+                            .form-group.form_item.textarea_wrap.has-error
+                                label(for='input4') Please tell us more about your request and give us info about your company and country
+                                textarea(id='input4')
+                                .help-block write correct text
+                    .form-group.checkbox_wrap
+                        input(type='checkbox', name='checkbox', id='checkbox1')
+                        label(for='checkbox1') I agree to the Terms and Condition of processing personal data
+                    button.rect_btn
+                        span Get in touch
+                        .rect_btn__balls
+

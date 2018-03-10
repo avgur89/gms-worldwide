@@ -1,0 +1,360 @@
+extends ../extend/default
+
+block variables
+    - var title = 'Enterprises';
+block header
+block main
+    include ../partials/_preloader
+    main.content(data-page='operators')
+        +header()
+        section.sub_first_screen(style='background-image: url(static/img/enterprises_first_screen_bg.jpg);')
+            .container
+                .breadcrumb
+                    ul
+                        li
+                            a(href='./home.html') Home
+                        li
+                            | Enterprises
+                .sub_first_screen__title.uikit__large_title
+                    h2 Enterprises
+                    .sub_first_screen__balls
+                .sub_first_screen__description
+                    p.uikit__paragraph There are numerous ways to reach out to one’s customers, and it takes experience to set up effective and cost-efficient communications strategy. At GMS, we immerse ourselves in your business and analyse your goals and audience. Based on the findings, we jointly design the best communication solution for your specific needs and provide our infrastructure to implement it.
+        section.services
+           .container
+               .services__title.mad_title.uikit__large_title
+                   .mad_title__balls
+                   h3 What we offer
+               .services__description
+                   .desc_item
+                       p Today an average consumer is spending increasingly more time on mobile screens. In 2016 the average consumer spent around 5 hours a day using a mobile device - a 20% increase compared to 2015. Every minute of those 5 hours your business could be reaching out to your customers. We want you to make the most of this opportunity, so we have designed a set of high-quality messaging solutions which can be tailored to your needs. Our solutions cover the whole communication cycle on each stage of your customer’s journey from a window shopper to a loyal brand advocate.
+                   .desc_item
+                       p Whether it’s messaging services, interactives, location-based ads, chatbots, or specific software development, GMS has a wide range of tools to choose from. We’ve been in the industry for over a decade, and daily serve more than 400 enterprises delivering their messages all around the world. Explore our services and let us enhance your communications strategy today.
+           .services__items
+               -
+                   var services_items = [
+                   {
+                   image: 'static/img/services/service_img1.jpg',
+                   title: 'Messaging services',
+                   description: 'GMS’ reliable and easy to use the multi-channel messaging platform, Hyber, allows you to set a global multi-channel communication flow in one convenient interface. Whether it’s SMS, push notifications, e-mail, voice, or OTT messaging – Hyber ensures reliable notification delivery across channels. Choose from a combination of customizable channels, broadcast messages, two-factor authentication, and receive online reports – all within one secure platform. All of these channels support 2-way messaging which allows your business to replace one-way communication with a dialogue to reach and engage your customers.',
+                   link: '#',
+                   list: ['Push', 'OTTs', 'SMS', 'Email'],
+                   videoSrc: 'static/video/Messaging_services'
+                   },
+                   {
+                   image: 'static/img/services/service_img2.jpg',
+                   title: 'Interactive Projects',
+                   description: 'GMS helps’ your business to create individualized, cost-efficient, instantly recognizable channels which can be used for multiple SMS campaigns. Create one or more custom numbers, measure campaign effectiveness, and leave the backend logic to GMS. Interactive SMS campaigns bring warm leads and enable your customers to contact you for more information, directly impacting sales. Two-way communications use shortcode-based interactive campaigns to engage customers.',
+                   link: '#',
+                   list: ['Short numbers', 'Long numbers'],
+                   videoSrc: 'static/video/Interactive_projects'
+                   },
+                   {
+                   image: 'static/img/services/service_img3.jpg',
+                   title: 'Mobile and location-based advertising',
+                   description: 'Mobile advertising is a more targeted way of advertising. Based on mobile subscribers’ data analysis and profiling, information about your products or services is delivered to your customers. Location-based ads allow you to reach your customer right where and when they want to be reached, thus increasing chances of conversion. While people can miss out on a generic email targeted SMS messages are opened instantly, so a timely automated, targeted offer based on the user’s location significantly increase the probabilities of bringing you a new customer right on the spot.',
+                   link: '#',
+                   list: ['Opt-in', 'Location based AD'],
+                   videoSrc: 'static/video/Mobile_and_location'
+                   },
+                   {
+                   image: 'static/img/services/service_img4.jpg',
+                   title: 'Software Solutions',
+                   description: 'GMS offers a range of top-quality, reliable software solutions ready to give an edge to your business. We are experienced in developing and supporting Chat Bots, mobile applications and business solutions for various business fields. If you don’t want your customer to bother downloading or updating a dedicated app, costly and complex to develop, then a web-based application is a quick to market and easy-to- support solution. All of GMS’ software solutions can be hosted In-Premise, In-Cloud, or hybrid, which makes them scalable, cost-efficient, and secure.',
+                   link: '#',
+                   list: ['Chatbots', 'Web site visitors scoring', 'Two factor strong authentication', 'Mob app development'],
+                   videoSrc: 'static/video/Software_solutions'
+                   }
+                   ]
+               each item in services_items
+                   .services__row
+                       .services__container
+                           .services__img
+                               .img
+                                   video(muted='', loop='')
+                                       source(src=`${item.videoSrc}.webm`, type='video/webm')
+                                       source(src=`${item.videoSrc}.mp4`, type='video/mp4')
+                           .services__item_right
+                               .services__text
+                                    h3.uikit__title=item.title
+                                    p.uikit__paragraph=item.description
+                               // temp change
+                               //+link-balls('learn more')(href=item.link, className='services__link', colorBalls='#333')
+                               ul.services__list
+                                each text in item.list
+                                    li=text
+        section.platform
+            .container
+                .uikit__large_title.platform__title.mad_title
+                    h2 Hyber Platform
+                    .mad_title__balls.mad_title__balls--many
+                .platform__text.uikit__paragraph Hyber is GMS’ secure, reliable, cost-efficient multi-channel messaging platform designed to take your multi-channel communications to the next level. By 2020 there will be around 5.7 Billion smartphones in use globally. GMS’ Hyber platform allows you to take full advantage of the ever-increasing number of smart-phone users, as well the rise of OTT messaging. We can create a strategy tailored to your needs and preferred channels, and the Hyber platform will ensure faultless and timely communications delivery across channels. It’s a single point of entry to the world of efficient, multi-channel communication.
+                .platform__list
+                    .platform__list_item
+                        .ico
+                            +svg('platform_ico1')
+                        p push
+                    .platform__list_separate
+                        i
+                        i
+                        i
+                        i
+                        i
+                    .platform__list_item
+                        .ico
+                            +svg('platform_ico2')
+                        p viber
+                    .platform__list_separate
+                        i
+                        i
+                        i
+                        i
+                        i
+                    .platform__list_item
+                        .ico
+                            +svg('platform_ico3')
+                        p sms
+                // temp change
+                //.platform__bottom
+                    +link-balls('learn more')(href='#', className='platform__link', colorBalls='#fff')
+        section.advantages
+            .convex_particles.convex_particles--full
+            .container
+                .advantages__flex
+                    .advantages__title
+                        h3.uikit__large_title Benefits of #[br]working with GMS
+                    .advantages__right
+                        div
+                            .advantages__right_item
+                                .advantages__icon
+                                    .ico
+                                        //+svg('advantage_icon1')
+                                        include ../svg/advantages_ico1.svg
+                                .text
+                                    h3 Structured approach
+                                    p.uikit__paragraph Before creating the strategy, GMS reviews current performance and identifies the right KPIs to control online acquisition.
+                            .advantages__right_item
+                                .advantages__icon
+                                    .ico
+                                        //+svg('advantage_icon2')
+                                        include ../svg/advantages_ico2.svg
+                                .text
+                                    h3 Smooth integration
+                                    p.uikit__paragraph A set of cloud-based communication APIs allows a business to integrate with multiple carriers and scale as you go.
+                            .advantages__right_item
+                                .advantages__icon
+                                    .ico
+                                        //+svg('advantage_icon2')
+                                        include ../svg/advantages_ico3.svg
+                                .text
+                                    h3 Turnkey multi-channel communications
+                                    p.uikit__paragraph GMS offers a wide range of solutions to interact with your customers through multiple channels in a safe, convenient and reliable environment.
+                            .advantages__right_item
+                                .advantages__icon
+                                    .ico
+                                        //+svg('advantage_icon2')
+                                        include ../svg/advantages_ico4.svg
+                                .text
+                                    h3 Tailored solutions
+                                    p.uikit__paragraph Every client’s situation is unique, and we treat them uniquely: the solution GMS will offer to you will be custom-made, tailored to your exact needs.
+        section.personal_education
+            .container
+                .personal_education__title.title--js
+                    h3.uikit__title We take your business to the next level
+                p.uikit__paragraph GMS is a reliable partner with more than ten years of experience in messaging. If you are ready to take a leap towards success or want to learn more about our services, our team will gladly get in touch with you.
+                a.rect_btn.rect_btn--green(href='#', data-form-anchor='#action_form')
+                    .rect_btn__balls(data-color='#3db565')
+                    span SEND
+        section.cases
+            .container
+                .cases__title.mad_title
+                    .mad_title__balls
+                    h3.uikit__title Use Cases
+                .cases__items
+                    .cases__item
+                        // temp change
+                        //a(href='#')
+                        .cases__img
+                            .img
+                                img(src='static/img/metro-event.jpg')
+                        .cases__logo
+                            .img
+                                img(src='static/img/clients/client6.png', class='grayscale')
+                        .cases__description
+                            h4
+                                span.inline_underline Ensure technical support for METRO-Bonus terminals, enhance communications with customer and marketing.
+                            .cases__hidding.js-slide-toggle--content
+                                h5 Solution:
+                                p Viber and SMS messaging channels improve the cost efficiency of communicating with customers, and technical support for the terminals ensures the smooth functioning of other marketing elements, including loyalty programs, vouchers, bonuses, etc.
+                                h5 Impact:
+                                p With the help of GMS, METRO’s promo campaign conversion rate increased twice. For “Open doors” campaigns traffic to stores increased by 10%. By 2017 METRO plans to increase Viber traffic to up to 4 million / month.
+                            +link-balls('learn more')(href='#', className='js-slide-toggle--link', colorBalls='#333', toggleText='hide info')
+                    .cases__item
+                        // temp change
+                        //a(href='#')
+                        .cases__img
+                            .img
+                                img(src='static/img/axa-event.jpg')
+                        .cases__logo
+                            .img
+                                img(src='static/img/clients/client-axa.png', class='grayscale')
+                        .cases__description
+                            h4
+                                span.inline_underline Set up bulk messaging, configure multi-channel marketing, and provide support for the call center.
+                            .cases__hidding.js-slide-toggle--content
+                                h5 Solution:
+                                p Efficient, convenient multi-channel messaging has been ensured, including Viber messaging and bulk messaging. Short numbers and interactive solutions allow easy and convenient communication for customers with call centers.
+                                h5 Impact:
+                                p Customer satisfaction rate has been increased using short number while the overall cost for customer’s notification decreased; SMS-verification allowed to effectively identify customers without having them take any extra steps; Viber allowed to improve marketing strategy by analyzing the insights from the conversion rates.
+                            +link-balls('learn more')(href='#', className='js-slide-toggle--link', colorBalls='#333', toggleText='hide info')
+                    .cases__item
+                        // temp change
+                        //a(href='#')
+                        .cases__img
+                            .img
+                                img(src='static/img/allo-event.jpg')
+                        .cases__logo
+                            .img
+                                img(src='static/img/clients/allo-client.png', class='grayscale')
+                        .cases__description
+                            h4
+                                span.inline_underline Improve conversion and cost-efficiency of promo campaigns.
+                            .cases__hidding.js-slide-toggle--content
+                                h5 Solution:
+                                p Viber messaging and SMS were used in the sound marketing strategy. The interactives solution was commonly used in each campaign to attract potential customers.
+                                h5 Impact:
+                                p Allo’s promo campaign conversion rates and subsequent sales increased by 22%. Contacts via mobile phone (OTT messengers and SMS) proved to be most efficient and cost-effective for different types of campaigns and promos.
+                            +link-balls('learn more')(href='#', className='js-slide-toggle--link', colorBalls='#333', toggleText='hide info')
+        section.events
+            .container
+                .events__title.mad_title
+                    .mad_title__balls
+                    h3.uikit__title Upcoming events
+                .events__items
+                    .events__item
+                        a(href='http://www.capacityconferences.com/Messaging-SMS', target='_blank')
+                            .events__img
+                                .img_group
+                                    .img
+                                        img(src='static/img/event5.jpg')
+                                    .img
+                                        img(src='static/img/event5.jpg')
+                                    .img
+                                        img(src='static/img/event5.jpg')
+                            .events__top
+                                .events__date
+                                    h3 28-29 November 2017
+                                .events__location.drawn_text
+                                    .drawn_text__overflow
+                                        h3 Congress Center, London
+                            .events__description
+                                p Messaging&SMS World
+                                .events__description_balls
+                    .events__item
+                        a(href='https://www.mobileworldcongress.com/', target='_blank')
+                            .events__img
+                                .img_group
+                                    .img
+                                        img(src='static/img/event6.jpg')
+                                    .img
+                                        img(src='static/img/event6.jpg')
+                                    .img
+                                        img(src='static/img/event6.jpg')
+                            .events__top
+                                .events__date
+                                    h3 26 Feb - 01 Mar 2018
+                                .events__location.drawn_text
+                                    .drawn_text__overflow
+                                        h3 Barcelona, Spain
+                            .events__description
+                                p Mobile World Congress
+                                .events__description_balls
+                    .events__item
+                        a(href='https://infocentre2.gsma.com/_layouts/InfoCentre/Login.aspx?ReturnUrl=%2fgp%2fwg%2fWA%2f_layouts%2fAuthenticate.aspx%3fSource%3d%252Fgp%252Fwg%252FWA%252FPages%252FDefault%252Easpx&amp;Source=%2Fgp%2Fwg%2FWA%2FPages%2FDefault%2Easpx', target='_blank')
+                            .events__img
+                                .img_group
+                                    .img
+                                        img(src='static/img/event7.jpg')
+                                    .img
+                                        img(src='static/img/event7.jpg')
+                                    .img
+                                        img(src='static/img/event7.jpg')
+                            .events__top
+                                .events__date
+                                    h3 19-22 March 2018
+                                .events__location.drawn_text
+                                    .drawn_text__overflow
+                                        h3 Grand Hyatt Dubai, UAE
+                            .events__description
+                                p WAS#7
+                                .events__description_balls
+                // temp change
+                //section.articles
+                //    .container
+                //        .articles__title.mad_title
+                //            .mad_title__balls
+                //            h3.uikit__title Expertise articles
+                //        .articles__items
+                //            .articles__item
+                //                a(href='#')
+                //                    h4
+                //                        span.inline_underline Mobile World Congress
+                //                    p For a real estate agent in pursuit of a hot lead, speed is everything. According to a study by Dr. James Oldroyd of MIT, an agent’s odds of successfully contacting an online lead are 100 times higher.
+                //            .articles__item
+                //                a(href='#')
+                //                    h4
+                //                        span.inline_underline 2017 Competitive Carriers Association (CCA) Annual Convention
+                //                    p For a real estate agent in pursuit of a hot lead, speed is everything. According to a study by Dr. James Oldroyd of MIT, an agent’s odds of successfully contacting an online lead are 100 times higher.
+                //            .articles__item
+                //                a(href='#')
+                //                    h4
+                //                        span.inline_underline Mobile World Congress
+                //                    p For a real estate agent in pursuit of a hot lead, speed is everything. According to a study by Dr. James Oldroyd of MIT, an agent’s odds of successfully contacting an online lead are 100 times higher.
+                //        .articles__bottom
+                //            +link-balls('see more')(href='#', className='articles__link', colorBalls='#333')
+        section.action(id='action_form')
+            .action__close
+                +svg('close-ico')
+            .action__overflow
+                .action__convex_particles
+                .actiion__slides
+                    .action__slide
+                        .action__slide_content
+                            .container
+                                p Let`s grow your business together
+                    .action__slide
+                        .action__slide_content
+                            .container
+                                p Get in touch
+                            .action__dropdown
+                                .container
+                                    form
+                                        .form-group.form_item.input_wrap.has-success
+                                            label(for='input1') Name
+                                            input(id='input1')
+                                            .help-block write correct name
+                                        .form-group.form_item.input_wrap.has-error
+                                            label(for='input2') Phone
+                                            input(id='input2')
+                                            .help-block write correct phone
+                                        .form-group.form_item.input_wrap
+                                            label(for='input3') E-mail
+                                            input(id='input3')
+                                            .help-block write correct e-mail
+                                        .form-group.form_item.textarea_wrap.has-error
+                                            label(for='input4') Tell us more about your request
+                                            textarea(id='input4')
+                                            .help-block write correct text
+                                        .form-group.checkbox_wrap
+                                            input(type='checkbox', name='checkbox', id='checkbox1')
+                                            label(for='checkbox1') I agree to the Terms and Condition of processing personal data
+                                        button.rect_btn
+                                            span Get in touch
+                                            .rect_btn__balls
+                    .action__slide
+                        .action__slide_content
+                            .container
+                                p Thanks!
+
+
+

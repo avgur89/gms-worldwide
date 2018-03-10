@@ -1,0 +1,134 @@
+.video_nav
+    &__container
+        //width: 1600px
+        max-width: 100%
+        margin: 0 auto
+    &__items
+        +flex(row, wrap, flex-start, stretch)
+        background: linear-gradient(to right, #ebe9e9 0%, #ebe9e9 50%, #fff 50%, #fff 100%)
+    &__item
+        width: 50%
+        position: relative
+        overflow: hidden
+        padding-bottom: 40px
+        +res('tam')
+            padding-bottom: 35px
+        +res('mob')
+            width: 100%
+            background: #ffffff
+            &:nth-child(odd)
+                background: #ebe9e9
+        &:nth-child(even)
+            .video_nav__text
+                margin-left: 0
+                margin-right: 0
+        .video
+            height: 310px
+            width: 100%
+            overflow: hidden
+            background-size: cover
+            background-position: center center
+            +res('desk-min')
+                background: none
+            +res('mob')
+                height: 240px
+        +cover-video
+        +res('tam')
+            video, object-fit
+                display: none!important
+    &__text
+        width: 784px
+        margin-left: auto
+        max-width: 100%
+        padding: 0 65px
+        +res('desk')
+            padding: 0 55px
+        +res('tam')
+            padding: 0 30px
+        +res('mob')
+            padding: 0 10px
+    &__title
+        margin: 38px 0 30px
+        position: relative
+        &:hover
+            +res('desk-min')
+                h2
+                    color: #3e3e3e
+        +res('mob')
+            margin: 12px 0
+            h2
+                font-size: 36px
+                line-height: normal
+        h2
+            color: #3db565
+            font: 50px $light
+            line-height: 48px
+            transition: .3s
+    .drawn_text__balls_overflow
+        position: absolute
+        z-index: 10
+        width: 150%
+        height: 100%
+    &__list
+        li
+            margin-bottom: 5px
+            font: 11px $semi
+            text-transform: uppercase
+            letter-spacing: 1.54px
+            color: #333333
+            // temp change
+            padding: 10px 15px 10px 0
+            +res('mob')
+                padding-top: 5px
+                padding-bottom: 6px
+            // temp change end
+        a
+            display: inline-block
+            padding: 10px 80px 10px 0
+            position: relative
+            max-width: 100%
+            +res('tam')
+                padding-right: 10px
+            +res('mob')
+                padding-top: 5px
+                padding-bottom: 6px
+            i
+                position: absolute
+                content: ''
+                width: 5px
+                height: 5px
+                right: 0px
+                top: 50%
+                margin-top: -2.5px
+                background: $green
+                border-radius: 50%
+                transition: .3s .1s
+                transform: translateX(-10px)
+                opacity: 0
+                &:nth-of-type(2)
+                    right: 10px
+                    transition: .3s .05s
+                &:nth-of-type(1)
+                    right: 20px
+                    transition: .3s
+            span
+                display: block
+                transition: .5s
+                white-space: nowrap
+                text-overflow: ellipsis
+                overflow: hidden
+            +res('desk-min')
+                &:hover
+                    color: $green
+                    i
+                        transform: translateX(0)
+                        opacity: 1
+                        transition: .3s
+                        &:nth-of-type(2)
+                            right: 10px
+                            transition: .3s .05s
+                        &:nth-of-type(1)
+                            right: 20px
+                            transition: .3s .1s
+                    span
+                        transform: translateX(40px)

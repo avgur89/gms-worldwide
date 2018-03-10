@@ -1,0 +1,43 @@
+mixin header(className)
+    header.header.overflow-margin(class!=className)
+        .container
+            .header__flex
+                a(href='./home.html', class='header__logo')
+                    +logo('header-logo')
+                .header__right
+                    .header__nav
+                        -
+                            var nav_list = [
+                                    { href: './operators.html', text: 'Operators' },
+                                    { href: './enterprises.html', text: 'Enterprises' },
+                                    /** temp change
+                                    { href: '#', text: 'Cases' },
+                                    { href: '#', text: 'Knowledge center' },
+                                    **/
+                                    { href: './about.html', text: 'Company' },
+                                    { href: './contact.html', text: 'Contacts' },
+                                    { href: 'https://portal.gms-worldwide.com/', text: 'Login' }
+                                ]
+                        ul
+                            each item, index in nav_list
+                                if (index === nav_list.length - 1)
+                                    li
+                                        a(href=item.href, class="header__login", target='_blank')= item.text
+                                else
+
+                                    li
+                                        a(href=item.href)= item.text
+                    .header__toggle
+                        a
+                            p Menu
+                            .dots
+                                i
+                                i
+                                i
+                    // temp change
+                    //.header__lang_select
+                    //    select
+                    //        option(value='en', selected='') en
+                    //        option(value='ch') ch
+                    //        option(value='ru') ru
+

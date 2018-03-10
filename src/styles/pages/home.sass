@@ -1,0 +1,187 @@
+[data-page='home']
+    background: #262626
+    position: relative
+    z-index: 0
+
+.video_container
+    position: absolute
+    height: 100%
+    top: 0
+    left: 0
+    width: 100%
+    overflow: hidden
+    z-index: 1
+.image_background
+    position: absolute
+    height: 100%
+    top: 0
+    left: 0
+    width: 100%
+    overflow: hidden
+    z-index: 1
+    &__item
+        position: absolute
+        top: 0px
+        left: 0px
+        width: 100%
+        height: 100%
+        background-size: cover
+        background-position: center center
+        +res('desk-min')
+            background: none!important
+        &:nth-child(1)
+            z-index: 1
+        &:nth-child(2)
+            z-index: 2
+            transform: translate(-3.75vw, -3.75vw)
+        &:nth-child(3)
+            z-index: 3
+            transform: translate(-7.5vw, -7.5vw)
+.video_background
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    overflow: hidden
+    +res('tam')
+        display: none
+    &:after
+        background-color: #000000
+        opacity: 0.47
+        position: absolute
+        left: 0px
+        top: 0px
+        height: 100%
+        z-index: 2
+        content: ''
+        width: 100%
+    video
+        width: 100%
+        height: 100%
+        object-fit: cover
+        object-position: bottom right
+        font-family: 'object-fit: cover; object-position: bottom right;'
+        z-index: 1
+
+.main_screen
+    position: relative
+    .video_background__fill
+        position: absolute
+        left: 0px
+        top: 0px
+        height: 100%
+        width: 100%
+        z-index: 2
+        background: #262626
+    &:after
+        background-color: #000000
+        opacity: 0.47
+        position: absolute
+        left: 0px
+        top: 0px
+        height: 100%
+        z-index: 1
+        content: ''
+        width: 100%
+    .video_background
+        z-index: 1
+        &:after
+            display: none
+    &__content
+        position: relative
+        height: 100vh
+        z-index: 3
+    &__balls
+        width: 100%
+        height: 90%
+        position: absolute
+        z-index: 10
+    &__btn
+        position: absolute
+        margin-left: 205px
+        bottom: 118px
+        z-index: 10
+        +flex(row, wrap, flex-start, center)
+        +res('tam')
+            margin-left: 0
+        +res('mob')
+            bottom: 92px
+            .circle_play__dots
+                height: 80px
+        .shadow_on
+            .circle_play__dots
+                i
+                    animation-play-state: running !important
+                    @for $i from 1 through 5
+                        @keyframes animateDots#{$i}
+                            0%
+                                transform: translateY(#{-60px + ($i * 10)}) scale(1)
+                            40%
+                                transform: translateY(0px) scale(1)
+                                opacity: 1
+                            50%
+                                transform: translateY(0px) scale(1)
+                            65%
+                                transform: translateY(0px) scale(0)
+                            100%
+                                transform: translateY(0px) scale(0)
+                                opacity: 1
+                        &:nth-child(#{$i})
+                            animation: animateDots#{$i} 2s cubic-bezier(0.165, 0.84, 0.44, 1) infinite
+
+        .circle_play__dots
+            width: 100%
+            position: absolute
+            height: 90px
+            margin-top: 20px
+            transition: .4s
+            i
+                position: absolute
+                height: 5px
+                width: 5px
+                content: ''
+                left: 50%
+                margin-left: -2px
+                background: #fff
+                border-radius: 50%
+                animation-delay: 1s
+                transform-origin: 50% 50%
+                @for $i from 1 through 5
+                    &:nth-child(#{$i})
+                        top: calc(20% * #{$i - 1})
+                        opacity: 0
+
+        a:not(.circle_play)
+            color: #ffffff
+            font: 14px $semi
+            text-transform: uppercase
+            letter-spacing: 0.85px
+            margin-left: 50px
+            +res('mob')
+                margin-left: 20px
+                font-size: 11px
+
+    &__center
+        position: relative
+        width: 100%
+        margin: 260px 0
+        +res('mob')
+            margin: 240px 0
+    &__flex
+        height: 100%
+        +flex(row, wrap, flex-start, center)
+        .uikit__large_title
+            color: #fff
+
+@import '../sections/about_us'
+@import '../sections/coverage'
+@import '../sections/level_up'
+@import '../sections/video_nav'
+@import '../sections/clients_progress'
+@import '../sections/clients'
+@import '../sections/events'
+@import '../sections/action'
+@import '../sections/director'
+
+

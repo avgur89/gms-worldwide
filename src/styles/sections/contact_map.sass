@@ -1,0 +1,107 @@
+.contact_map
+    background-color: #262626
+    padding: 90px 0 152px
+    position: relative
+    +res('mob')
+        padding: 42px 0 250px
+    h4
+        font: 26px $light
+        line-height: 36px
+        letter-spacing: .8px
+        margin-bottom: 26px
+        color: #ffffff
+        +res('mob')
+            font-size: 15px
+            line-height: 28px
+            letter-spacing: 0.5px
+            margin-bottom: 15px
+    &__bottom
+        color: #fff
+    //    p
+    //        font: 11px $light
+    //        line-height: 20px
+    //        letter-spacing: 0.3px
+    //        color: #fff
+    &__select
+        font: 11px $semi
+        text-transform: uppercase
+        line-height: 18px
+        letter-spacing: 1.54px
+        color: $green
+        margin-bottom: 28px
+        .custom-select-opener
+            display: none
+            +res('mob')
+                display: inline-block
+        ul
+            +flex(row, wrap, flex-start, flex-start)
+            margin: 0 -20px
+            +res('mob')
+                display: none
+            li
+                padding: 9px 0
+                margin: 0 20px
+                cursor: pointer
+                color: #fff
+                transition: .3s
+                &.active
+                    color: $green
+    .custom-select-container
+        line-height: 36px
+        z-index: 10
+    .custom-select-panel
+        position: absolute
+        top: 100%
+        left: 0px
+        background-color: #262626
+    .custom-select-opener
+        padding-right: 30px
+        &:before
+            position: absolute
+            width: 11px
+            height: 7px
+            content: ''
+            background: url(../img/select-arrow.png) no-repeat center center
+            right: 0px
+            top: 50%
+            margin-top: -3.5px
+    .container
+        position: relative
+        z-index: 2
+    &__title
+        margin-bottom: 25px
+        +res('mob')
+            margin-bottom: 10px
+        .uikit__title
+            color: #fff
+    &__slider
+        position: absolute
+        z-index: 1
+        left: 0
+        top: 0
+        width: 100%
+        height: 100%
+        .slick-list, .slick-track
+            height: 100%
+    &__slide
+        background-size: cover
+        background-position: 50% 50%
+        position: relative
+        .pin
+            position: absolute
+            margin: -14px 0 0 -14px
+            width: 28px
+            height: 28px
+            border-radius: 50%
+            background: $green
+            left: 72%
+            top: 49%
+            +res('mob')
+                top: auto
+                bottom: 90px
+                left: 50%
+        @for $i from 1 through 4
+            &:nth-child(#{$i})
+                background-image: url(../img/locations/#{$i}_1920.png)
+                +res('mob')
+                    background-image: url(../img/locations/#{$i}_768.png)

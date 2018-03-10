@@ -1,0 +1,387 @@
+extends ../extend/default
+
+block variables
+    -
+        var title = 'Home page';
+        var bodyClass = 'page_lock'
+block header
+block main
+    include ../partials/_preloader
+    main.content(data-page='home')
+        +header()
+        +cookies()
+        section.main_screen
+            .video_background__fill
+            .video_container
+                .video_background
+                    video(data-autoplay='', muted='', loop='', poster='static/video/poster.jpg')
+                        source(src='static/video/main_screen.webm', type='video/webm')
+                        source(src='static/video/main_screen.mp4', type='video/mp4')
+                .image_background
+                    .image_background__item(style='background-image: url(static/video/main_screen_mobile_poster.png)')
+                    .image_background__item(style='background-image: url(static/video/main_screen_mobile_poster.png)')
+                    .image_background__item(style='background-image: url(static/video/main_screen_mobile_poster.png)')
+            .container
+                .main_screen__content
+                    .main_screen__flex
+                        .main_screen__center
+                            .main_screen__balls
+                            h2.uikit__large_title We are a global messaging provider offering services for mobile operators and enterprises
+                .main_screen__btn
+                    +circle-play('a', 'main_screen__btn', '#main_screen__modal', 'circle_play--js')
+                        .circle_play__dots
+                            i
+                            i
+                            i
+                            i
+                            i
+                    a(href='#main_screen__modal', class='choose', data-fancybox='') Choose Progress
+        section.about_us
+            .container
+                .about_us__flex
+                    .about_us__left
+                        .about_us__title.mad_title
+                            .mad_title__balls
+                            h3.uikit__title We are a global team with strong expertise in messaging services
+                        .about_us__text
+                            div.about_us__col
+                                p.uikit__paragraph Being pioneers in A2P and P2P monetization and leaders in the CIS market for more than ten years, today we have expanded globally with now than 200 mobile operators worldwide directly connected with GMS.
+                            div.about_us__col
+                                p.uikit__paragraph We value our clients and partners. We want them to grow. We are ready to offer all of our profound knowledge of the market, create turnkey solutions of the highest quality, and tailor them perfectly to fit the needs of each client.
+                    .about_us__right
+                        .about_us__right_item
+                            .about_us__icon
+                                .ico
+                                    //+svg('about_us_icon1')
+                                    include ../svg/icon_1.svg
+                            .text
+                                h3 Vision
+                                p Our vision is to become the leader and the ambassador for trusted and transparent messaging worldwide.
+                        .about_us__right_item
+                            .about_us__icon
+                                .ico
+                                    //+svg('about_us_icon2')
+                                    include ../svg/icon_2.svg
+                            .text
+                                h3 mission
+                                p Our mission is to bring progress to our partners.
+        section.coverage.coverage
+            .container
+                .coverage__content
+                    //+link-balls('learn more')(href='about.html', className='coverage__link')
+                    .coverage__items
+                        -
+                            var coverage = [
+                            { title: '11', text: '11 years of industry leadership' },
+                            { title: '900', text: 'over 900 mobile operators in 200 countries' },
+                            { title: '200', text: 'over 200 mobile operators directly connected' },
+                            { title: '20', text: '20 MNOs’ successful monetization cases' },
+                            { title: '300', text: 'over 300 enterprises worldwide' },
+                            { title: 'CIS', text: 'largest GSMA Compliant messaging provider in the CIS' },
+                            { title: 'ISO', text: 'ISO/IEC 27001, 9001, and ISO/IEC 20000-1 certified' },
+                            { title: 'GSMA', text: 'GSMA Associate Member since 2007' }
+                            ]
+                        each item in coverage
+                            .coverage__item
+                                .fade_wrap
+                                    h3=item.title
+                                    p=item.text
+        section.video_nav
+            .video_nav__container
+                .video_nav__items
+                    .video_nav__item
+                        .video(style='background-image: url(static/video/video_nav/operators.jpg);')
+                            video(autoplay='', muted='', loop='', poster='static/video/video_nav/operators.jpg')
+                                source(src='static/video/video_nav/operators.webm', type='video/webm')
+                                source(src='static/video/video_nav/operators.mp4', type='video/mp4')
+                        .video_nav__text
+                            .video_nav__title
+                                a(href='./operators.html')
+                                    .drawn_text
+                                        .drawn_text__balls_overflow
+                                            .drawn_text__balls
+                                        .drawn_text__overflow
+                                            h2 Operators
+                            .video_nav__list
+                                ul
+                                    li
+                                        // temp change
+                                        //a(href='#')
+                                        span Messaging services
+                                        i
+                                        i
+                                        i
+                                    li
+                                        // temp change
+                                        //a(href='#')
+                                        span Monetization solutions
+                                        i
+                                        i
+                                        i
+                                    // temp change
+                                    //li
+                                    //    // temp change
+                                    //    //a(href='#')
+                                    //    span IPX
+                                    //    i
+                                    //    i
+                                    //    i
+                    .video_nav__item
+                        .video(style='background-image: url(static/video/video_nav/enterprise.jpg);')
+                            video(autoplay='', muted='', loop='', poster='static/video/video_nav/enterprise.jpg')
+                                source(src='static/video/video_nav/enterprise.webm', type='video/webm')
+                                source(src='static/video/video_nav/enterprise.mp4', type='video/mp4')
+                        .video_nav__text
+                            .video_nav__title
+                                a(href='./enterprises.html')
+                                    .drawn_text
+                                        .drawn_text__balls_overflow
+                                            .drawn_text__balls
+                                        .drawn_text__overflow
+                                            h2 Enterprises
+                            .video_nav__list
+                                ul
+                                    li
+                                        // temp change
+                                        //a(href='#')
+                                        span Messaging services
+                                        i
+                                        i
+                                        i
+                                    li
+                                        // temp change
+                                        //a(href='#')
+                                        span Interactives
+                                        i
+                                        i
+                                        i
+                                    li
+                                        // temp change
+                                        //a(href='#')
+                                        span Mobile and location based ads
+                                        i
+                                        i
+                                        i
+                                    li
+                                        // temp change
+                                        //a(href='#')
+                                        span Software solutions
+                                        i
+                                        i
+                                        i
+        section.level_up
+            .convex_particles
+            .container
+                .level_up__title.title--js
+                    h3.uikit__title We help our clients move to the next level
+                .level_up__scroll
+                    .level_up__items
+                        .level_up__item
+                            .drawn_text
+                                .drawn_text__overflow
+                                    h2 Quality
+                            .level_up__text
+                                p.uikit__paragraph We set and provide the highest quality and transparency standards on the market.
+                        .level_up__item
+                            .drawn_text
+                                .drawn_text__overflow
+                                    h2 Turnkey
+                            .level_up__text
+                                p.uikit__paragraph We deliver efficient, cutting-edge turnkey solutions in an easy and accessible way.
+                        .level_up__item
+                            .drawn_text
+                                .drawn_text__overflow
+                                    h2 Tailored
+                            .level_up__text
+                                p.uikit__paragraph We develop unique, tailored solutions to fit our partners specific business needs.
+                // temp change
+                //.level_up__bottom
+                //    +link-balls('learn more')(href='#', className='level_up__link', colorBalls='#333')
+        .director(style='background-image: url(static/img/director_bg.jpg);')
+            .container
+                .director__title.drawn_text
+                    .drawn_text__balls
+                    .drawn_text__overflow
+                        h2 Iurii Makarenko
+                .director__content
+                    // temp change
+                    .director__bottom(style='min-height: 110px; margin-left: 0;')
+                        // temp change
+                        //+circle-play('a', 'director__btn', '#main_screen__modal')
+                        .director__text
+                            p.uikit__paragraph We believe that every step we take towards innovation, progress, transparency and security – paves the road to the success and prosperity of the telecommunications industry. This ambition drives us to keep improving and reaching for the new heights every day.
+        .director__mob_description
+            .container
+                h2 Iurii Makarenkko
+                p Through its cutting edge technology and service coverage in 200+ countries, GMS guarantees receipt and delivery of personal and bulk messages to any destination worldwide in just milliseconds.
+        section.clients_progress
+            .convex_particles
+            .container
+                .clients_progress__title.title--js
+                    h3.uikit__title Here is a glance at some of the breakthroughs our clients have achieved
+                .clients_progress__items
+                    .clients_progress__item
+                        .clients_progress__logo
+                            img(src='static/img/client1.png', class='grayscale')
+                        .clients_progress__percent.drawn_text
+                            .drawn_text__overflow
+                                h4 10%
+                        .clients_progress__text
+                            p With the help of a GMS messaging solution, METRO’s promo campaign conversion rate increased by 2.5 times. For “open door” campaigns traffic to stores increased by 10%.
+                    .clients_progress__item
+                        .clients_progress__logo
+                            img(src='static/img/client2.png', class='grayscale')
+                        .clients_progress__percent.drawn_text
+                            .drawn_text__overflow
+                                h4 14%
+                        .clients_progress__text
+                            p GMS provided a Viber-based optimization for customers’ delivery notifications which allowed Nova Poshta to decrease the costs by 14%.
+                    // temp change
+                    //.clients_progress__item
+                    //    .clients_progress__logo
+                    //        img(src='static/img/client3.png', class='grayscale')
+                    //    .clients_progress__percent.drawn_text
+                    //        .drawn_text__overflow
+                    //            h4 1826%
+                    //    .clients_progress__text
+                    //        p Through carefully guided, market-friendly tariff rebalancing and control & visibility assurance, GMS has helped Tacom achieve 100% monetization of International A2P traffic and reduction of operational costs previously inflated by grey route traffic termination. This allowed for 1826% growth in revenue while keeping the market appealing to enterprises.
+                    .clients_progress__item
+                        .clients_progress__logo
+                            img(src='static/img/clients/client8.png', class='grayscale')
+                        .clients_progress__percent.drawn_text
+                            .drawn_text__overflow
+                                h4 2400%
+                        .clients_progress__text
+                            p Restricting spam and illegitimate traffic provided full visibility of the messaging volumes. Capital and operational costs reduction, combined with maximized A2P and P2P traffic monetization allowed the profits from messaging to increase by up to 2400% of incremental revenue growth.
+                // temp change
+                //.clients_progress__bottom
+                //    +link-balls('See all our cases')(href='#', className='level_up__link', colorBalls='#333')
+        section.clients
+            .container
+                .clients__title.title--js
+                    h3.uikit__title Clients
+                .clients__items
+                    -
+                        var clients = [
+                        { image: 'static/img/clients/client1.png', href: '#' },
+                        { image: 'static/img/clients/client2.png', href: '#' },
+                        { image: 'static/img/clients/client3.png', href: '#' },
+                        { image: 'static/img/clients/client4.png', href: '#' },
+                        { image: 'static/img/clients/client5.png', href: '#' },
+                        { image: 'static/img/clients/client6.png', href: '#' },
+                        { image: 'static/img/clients/client7.png', href: '#' },
+                        { image: 'static/img/clients/client8.png', href: '#' },
+                        { image: 'static/img/clients/client9.png', href: '#' },
+                        { image: 'static/img/clients/client10.png', href: '#' }
+                        ]
+                    each item in clients
+                        .clients__item
+                            .img
+                                img(src=item.image, class='grayscale')
+        section.events
+            .container
+                .events__title.mad_title
+                    .mad_title__balls
+                    h3.uikit__title Upcoming events
+                .events__items
+                    .events__item
+                        a(href='http://www.capacityconferences.com/Messaging-SMS', target='_blank')
+                            .events__img
+                                .img_group
+                                    .img
+                                        img(src='static/img/event5.jpg')
+                                    .img
+                                        img(src='static/img/event5.jpg')
+                                    .img
+                                        img(src='static/img/event5.jpg')
+                            .events__top
+                                .events__date
+                                    h3 28-29 November 2017
+                                .events__location.drawn_text
+                                    .drawn_text__overflow
+                                        h3 Congress Center, London
+                            .events__description
+                                p Messaging&SMS World
+                                .events__description_balls
+                    .events__item
+                        a(href='https://www.mobileworldcongress.com/', target='_blank')
+                            .events__img
+                                .img_group
+                                    .img
+                                        img(src='static/img/event6.jpg')
+                                    .img
+                                        img(src='static/img/event6.jpg')
+                                    .img
+                                        img(src='static/img/event6.jpg')
+                            .events__top
+                                .events__date
+                                    h3 26 Feb - 01 Mar 2018
+                                .events__location.drawn_text
+                                    .drawn_text__overflow
+                                        h3 Barcelona, Spain
+                            .events__description
+                                p Mobile World Congress
+                                .events__description_balls
+                    .events__item
+                        a(href='https://infocentre2.gsma.com/_layouts/InfoCentre/Login.aspx?ReturnUrl=%2fgp%2fwg%2fWA%2f_layouts%2fAuthenticate.aspx%3fSource%3d%252Fgp%252Fwg%252FWA%252FPages%252FDefault%252Easpx&amp;Source=%2Fgp%2Fwg%2FWA%2FPages%2FDefault%2Easpx', target='_blank')
+                            .events__img
+                                .img_group
+                                    .img
+                                        img(src='static/img/event7.jpg')
+                                    .img
+                                        img(src='static/img/event7.jpg')
+                                    .img
+                                        img(src='static/img/event7.jpg')
+                            .events__top
+                                .events__date
+                                    h3 19-22 March 2018
+                                .events__location.drawn_text
+                                    .drawn_text__overflow
+                                        h3 Grand Hyatt Dubai, UAE
+                            .events__description
+                                p WAS#7
+                                .events__description_balls
+        section.action
+            .action__close
+                +svg('close-ico')
+            .action__overflow
+                .action__convex_particles
+                .actiion__slides
+                    .action__slide
+                        .action__slide_content
+                            .container
+                                p Let`s grow your business together
+                    .action__slide
+                        .action__slide_content
+                            .container
+                                p Get in touch
+                            .action__dropdown
+                                .container
+                                    form
+                                        .form-group.form_item.input_wrap.has-success
+                                            label(for='input1') Name
+                                            input(id='input1')
+                                            .help-block write correct name
+                                        .form-group.form_item.input_wrap.has-error
+                                            label(for='input2') Phone
+                                            input(id='input2')
+                                            .help-block write correct phone
+                                        .form-group.form_item.input_wrap
+                                            label(for='input3') E-mail
+                                            input(id='input3')
+                                            .help-block write correct e-mail
+                                        .form-group.form_item.textarea_wrap.has-error
+                                            label(for='input4') Tell us more about your request
+                                            textarea(id='input4')
+                                            .help-block write correct text
+                                        .form-group.checkbox_wrap
+                                            input(type='checkbox', name='checkbox', id='checkbox1')
+                                            label(for='checkbox1') I agree to the Terms and Condition of processing personal data
+                                        button.rect_btn
+                                            span Get in touch
+                                            .rect_btn__balls
+                    .action__slide
+                        .action__slide_content
+                            .container
+                                p Thanks!
+    include ../partials/_modals

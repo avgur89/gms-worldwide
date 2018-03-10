@@ -1,0 +1,50 @@
+.not_found
+    background: #262626
+    &.animation-done
+        .not_found__item, .not_found__button
+            overflow: visible
+    .fullscreen__content
+        padding-top: 50px
+        margin: 75px 0
+    &__item
+        overflow: hidden
+    .container
+        +flex(column, nowrap, center, center)
+        height: 100%
+        &>div
+            width: 100%
+    &__icon
+        overflow: hidden
+        svg
+            width: 354px
+            height: 120px
+            fill: $green
+            display: block
+            margin: 0 auto
+            max-width: 100%
+            +res('mob')
+                width: 220px
+                height: 80px
+    &__text
+        overflow: hidden
+        text-align: center
+        color: #fff
+        margin-top: 40px
+        +res('mob')
+            margin-top: 25px
+        h3
+            font: 26px $light
+            line-height: 36px
+            margin-bottom: 15px
+            +res('mob')
+                font-size: 15px
+                line-height: 26px
+        p
+            color: inherit
+    &__button
+        margin-top: 42px
+        overflow: hidden
+        +res('mob')
+            margin-top: 35px
+            .rect_btn
+                width: 260px

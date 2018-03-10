@@ -1,0 +1,113 @@
+.about_us
+    background: #ffffff
+    padding: 90px 0 85px
+    overflow: hidden
+    +res('tam')
+        padding: 90px 0 95px
+    +res('mob')
+        padding: 48px 0 45px
+    &__col
+        width: 486px
+        padding-right: 100px
+        +res('desk')
+            padding-right: 20px
+        +res('tam')
+            width: 100%
+            padding: 0
+            margin-bottom: 10px
+        +res('mob')
+            margin-bottom: 20px
+    &__text
+        +flex(row, nowrap, flex-start, flex-start)
+        margin-top: 27px
+        +res('tam')
+            flex-wrap: wrap
+        +res('mob')
+            margin-top: 20px
+    &__title
+        position: relative
+        .uikit__title
+            text-align: left
+            width: 480px
+            max-width: 100%
+        .mad-particles
+            height: 90%
+    &__flex
+        +flex(row, wrap, space-between, flex-start)
+    &__right
+        width: 280px
+        +res('desk')
+            width: 270px
+            margin-right: 20px
+        +res('tam')
+            margin-right: 0px
+            width: 100%
+
+            +flex(row, wrap, flex-start, stretch)
+    &__left
+        width: calc(100% - 330px)
+        padding-right: 25px
+        +res('tam')
+            width: 100%
+    &__right_item
+        margin-top: 20px
+        +flex(row, nowrap, flex-start, flex-start)
+        &:first-child
+            margin-top: 4px
+        +res('tam')
+            margin-top: 20px
+            padding-right: 30px
+            width: 50%
+            &:first-child
+                margin-top: 20px
+        +res('mob')
+            width: 100%
+            padding-right: 0
+            margin-top: 10px
+            &:first-child
+                margin-top: 0px
+        h3
+            font: 14px $semi
+            text-transform: uppercase
+            letter-spacing: 0.85px
+            color: $green
+            width: calc(100% - 74px)
+            +res('mob')
+                font-size: 11px
+        p
+            color: #333333
+            font: 11px $light
+            line-height: 20px
+            letter-spacing: 0.5px
+            margin-top: 13px
+            +res('tam')
+                letter-spacing: .3px
+            +res('mob')
+                margin-top: 10px
+        .text
+            display: block
+            flex-shrink: 1
+            margin-top: 20px
+            //+res('mob')
+            //    margin-top: -12px
+    &__icon
+        margin-right: 20px
+        width: 54px
+        flex-shrink: 0
+        margin-top: 2px
+        .ico
+            width: 100%
+        svg
+            width: 54px
+            height: 54px
+            display: block
+            max-width: 100%
+        //transition: .4s
+        //&:hover
+        //    transform: rotate(180deg)
+        .icon-about_us_icon1
+            width: 54px
+            height: 54px
+        .icon-about_us_icon2
+            width: 56px
+            height: 50px

@@ -1,0 +1,10 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 185 185" style="enable-background:new 0 0 185 185;" xml:space="preserve">
+    <defs class="blur_filter">
+        <filter id="blur_filter" filterUnits="userSpaceOnUse" height="203" width="203" x="241" y="444">
+            <feOffset  in="SourceGraphic" result="FeOffset1099Out"></feOffset>
+            <feGaussianBlur  in="FeOffset1099Out" result="FeGaussianBlur1100Out" stdDeviation="14 14"></feGaussianBlur>
+        </filter>
+    </defs>
+    <circle cx='92.5' cy='92.5' r='92.5'></circle>
+</svg>

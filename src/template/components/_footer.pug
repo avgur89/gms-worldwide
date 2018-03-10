@@ -1,0 +1,39 @@
+mixin footer()
+    footer.footer
+        .container
+            .footer__content
+                .footer__top
+                    .header__flex
+                        a(href='./home.html', class='header__logo')
+                            +text-logo('footer-logo')
+                        .footer__right
+                            .header__nav
+                                -
+                                    var nav_list = [
+                                    { href: './operators.html', text: 'Operators' },
+                                    { href: './enterprises.html', text: 'Enterprises' },
+                                    { href: './about.html', text: 'Company' },
+                                    /** temp change
+                                    { href: '#', text: 'Cases' },
+                                    **/
+                                    { href: './contact.html', text: 'Contacts' }
+                                    ]
+                                ul
+                                    each item in nav_list
+                                        li
+                                            a(href=item.href)= item.text
+                            .footer__nav
+                                .footer__links
+                                    ul
+                                        li
+                                            a(href='./privacy.html') Data Privacy Statement and Terms of Use
+                                .footer__soc
+                                    ul
+                                        li
+                                            a(href='https://www.linkedin.com/company/global-message-services-ukraine/' target="_blank") linkedin
+
+                .footer__copyright
+                    p
+                        span Copyright © 2017. Developed by
+                        a(href='https://vintage.com.ua/', target='_blank')
+                            +svg('vintage-logo')

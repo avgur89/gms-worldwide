@@ -1,0 +1,50 @@
+.contact_form
+    position: relative
+    background: #43b368
+    padding: 90px 0px 102px
+    +res('mob')
+        padding: 42px 0 50px
+    &__title
+        margin-bottom: 18px
+        +res('mob')
+            margin-bottom: 15px
+        .uikit__title
+            color: #fff
+            +res('tam')
+                text-align: center
+    .form_item .help-block
+        top: 100%
+        left: 0
+        -webkit-transform: translate(0, 0) !important
+        -ms-transform: translate(0, 0) !important
+        transform: translate(0, 0) !important
+    form
+        +res('tam')
+            max-width: 100%
+            width: 540px
+            margin: 0 auto
+    &__items
+        +flex(row, wrap, space-between, flex-start)
+    &__item
+        //width: 540px
+        width: 47%
+        +res('tam')
+            width: 100%
+        .textarea_wrap
+            padding-top: 8px
+        .checkbox_wrap
+            margin-top: 18px
+        .input_wrap
+            margin-bottom: 7px
+            +res('mob')
+                margin-bottom: 20px
+    &__convex_particles
+        position: absolute
+        top: 0px
+        left: 0px
+        height: 100%
+        width: 100%
+    .rect_btn
+        margin: 44px 0 0
+        +res('tam')
+            margin: 40px auto 0

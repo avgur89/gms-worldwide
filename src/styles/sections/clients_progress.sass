@@ -1,0 +1,94 @@
+.clients_progress
+    position: relative
+    background: #fbf9f9
+    padding: 92px 0 56px
+    overflow: hidden
+    +res('mob')
+        padding: 25px 0 45px
+    .container
+        position: relative
+    +res('desk')
+        padding-bottom: 40px
+    .link_with_balls
+        a:before
+            color: #333
+    &__title
+        margin: 0 auto 78px
+        width: 690px
+        max-width: 100%
+        text-align: center
+        +res('desk')
+            margin-bottom: 75px
+        +res('mob')
+            margin-bottom: 25px
+            text-align: left
+    //&:before
+    //    background: url(../img/dot-pattern.png)
+    //    height: calc(100% - 240px)
+    //    position: absolute
+    //    bottom: 30px
+    //    left: 0px
+    //    width: 100%
+    //    content: ''
+    //    z-index: 0
+    &__items
+        +flex(row, nowrap, space-between, stretch)
+        margin: 0 -15px
+        +res('tam')
+            display: block
+            &.slick-dotted.slick-slider
+                margin-bottom: 30px
+        &:not(.slick-slider) > div
+            width: 670px
+            max-width: 50%
+            +res('desk')
+                width: 560px
+    &__item
+        margin: 0 15px 48px
+        position: relative
+        z-index: 0
+        +res('tam')
+            margin-bottom: 5px
+        +res('mob')
+            margin-bottom: 14px
+    &__text
+        color: #333333
+        font: 18px $light
+        line-height: 34px
+        margin-top: 2px
+        +res('mob')
+            font-size: 11px
+            line-height: 20px
+    &__percent
+        position: absolute
+        top: 0px
+        right: 0
+        z-index: -1
+        +res('mob')
+            top: 40px
+            h4
+                font: 36px $light
+                line-height: normal
+        h4
+            color: $green
+            font: 100px $ulight
+            line-height: 100px
+
+    &__logo
+        height: 60px
+        position: relative
+        +flex(row, wrap, flex-start, center)
+        img
+            display: block
+            filter: grayscale(100%)
+            max-height: 100%
+            max-width: 86px
+    &__bottom
+        text-align: right
+        +res('desk')
+            margin-top: -15px
+        +res('tam')
+            margin-top: -8px
+        +res('mob')
+            margin-top: 65px
+            text-align: left

@@ -1,0 +1,159 @@
+.history
+    padding: 86px 0 82px
+    background-color: #fbf9f9
+    +res('mob')
+        padding: 42px 0 30px
+    &__title
+        width: 100%
+        text-align: center
+        margin-bottom: 25px
+    &__centered
+        width: 770px
+        max-width: 100%
+        margin: 0 auto
+    &__text
+        color: #fff
+        margin-bottom: 42px
+        line-height: 28.5px
+        text-align: center
+        +res('mob')
+            margin-bottom: 15px
+    &__nav.slick-initialized
+        .history__nav_item
+            display: flex
+    &__nav
+        margin-bottom: 42px
+        position: relative
+        +res('tam')
+            margin: 0 -15px 42px
+            &:after
+                background-image: linear-gradient(to left, #fbf9f9 0%, rgba(251, 249, 249, 0) 100%)
+                position: absolute
+                right: 0
+                top: 0
+                width: 40%
+                height: 100%
+                content: ''
+                z-index: 15
+                pointer-events: none
+        +res('mob')
+            margin-bottom: 16px
+        .slick-list
+            width: 900px
+            margin: 0 auto
+            max-width: 100%
+            &:before
+                background-color: #fbf9f9
+                position: absolute
+                left: 0
+                top: 0
+                content: ''
+                height: 100%
+                width: 2px
+                z-index: 2
+        button
+            transition: .3s
+            font: 11px $semi
+            text-transform: uppercase
+            letter-spacing: 1.54px
+            color: $green
+            padding: 15px 0
+            position: absolute
+            margin: 0
+            transform: translateY(-50%)
+            width: auto
+            height: auto
+            white-space: nowrap
+            z-index: 10
+            &.slick-prev
+                left: 0
+            &.slick-next
+                right: 0
+            &:before
+                display: none
+            &.slick-disabled
+                opacity: 1
+                color: $green
+            &:hover
+                color: $green
+    &__nav_item
+        position: relative
+        +flex(row, nowrap, center, center)
+        font: 36px $light
+        color: $green
+        padding: 3px 20px 0
+        cursor: pointer
+        line-height: 34px
+        +res('tam')
+            padding: 0 15px 0
+        +res('mob')
+            padding: 0 15px 0
+            font-size: 22px
+            &:after
+                display: none
+            p
+                transform: scale(.6) translateZ(0px)
+                padding-top: 2px
+        p
+            padding-top: 3px
+            transition: .2s
+            transform: scale(.5) translateZ(0px)
+        &.slick-current
+            p
+                transform: scale(1) translateZ(0px)
+        &:after
+            position: absolute
+            background-color: #e5e3e3
+            width: 1px
+            height: 100%
+            content: ''
+            top: 0px
+            right: -1px
+        &:last-child
+            &:after
+                display: none
+    &__nav_separate
+        flex-shrink: 1
+        width: 100px
+        padding: 0 15px
+        +flex(row, nowrap, space-between, center)
+        +res('mob')
+            justify-content: center
+            width: 48px
+            padding: 0 20px
+            i
+                display: none
+                &:nth-child(1)
+                    display: block
+        i
+            width: 5px
+            height: 5px
+            border-radius: 50%
+            background: $green
+    &__content
+        h3
+            color: #2e2e2e
+            font: 26px $light
+            line-height: 34px
+            margin-bottom: 33px
+            +res('mob')
+                font-size: 15px
+                line-height: 24px
+                margin-bottom: 16px
+    &__list
+        li
+            padding-left: 30px
+            position: relative
+            margin-bottom: 8px
+            +res('mob')
+                margin-bottom: 12px
+                padding-left: 20px
+            &:before
+                position: absolute
+                left: 0
+                top: 10px
+                width: 6px
+                height: 6px
+                content: ''
+                background: $green
+                border-radius: 50%

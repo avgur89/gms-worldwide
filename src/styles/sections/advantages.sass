@@ -1,0 +1,71 @@
+.advantages
+    position: relative
+    padding: 90px 0 58px
+    background: #fbf9f9
+    +res('mob')
+        padding: 42px 0 20px
+    .container
+        position: relative
+        z-index: 10
+    &__flex
+        +flex(row, nowrap, space-between, flex-start)
+        +res('tam')
+            flex-wrap: wrap
+    &__title
+        width: 435px
+        .uikit__large_title
+            line-height: 60px
+        +res('tam')
+            width: 100%
+            .uikit__large_title
+                line-height: normal
+            br
+                display: none
+    &__right
+        width: 580px
+        margin-top: -5px
+        +res('tam')
+            margin-top: 16px
+        +res('mob')
+            margin-top: 8px
+    [data-scrollbar]
+        max-height: 315px
+        padding-right: 10px
+    &__right_item
+        margin-bottom: 21px
+        padding-bottom: 32px
+        border-bottom: 1px solid #e5e3e3
+        +flex(row, nowrap, flex-start, flex-start)
+        +res('mob')
+            padding-bottom: 24px
+        &:last-child
+            border: none
+            margin: 0
+        p
+            color: #333333
+            margin-top: 13px
+            +res('tam')
+                margin-top: 10px
+        h3
+            font: 26px $light
+            color: #333
+            line-height: 35px
+            +res('mob')
+                font-size: 16px
+                line-height: 24px
+        .text
+            display: block
+            margin-top: 10px
+            flex-shrink: 1
+    &__icon
+        flex-shrink: 0
+        .ico
+            margin-right: 36px
+            width: 54px
+            +res('mob')
+                margin-right: 16px
+        svg
+            width: 54px
+            height: 54px
+            display: block
+            max-width: 100%

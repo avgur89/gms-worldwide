@@ -1,0 +1,167 @@
+[data-page='privacy']
+    .sub_first_screen
+        position: relative
+        padding: 102px 0 72px
+
+        +res('mob')
+            padding: 85px 0 80px
+
+        &__title
+            margin: 85px 0 25px
+
+            +res('mob')
+                margin: 30px 0 23px
+
+        &:after
+            content: ''
+            display: block
+
+            position: absolute
+            top: 0
+            left: 0
+
+            width: 100%
+            height: 100%
+
+            background-color: #000000
+            opacity: 0.5
+
+    .editor
+        max-width: 802px
+        width: 100%
+
+        padding: 57px 0 60px 0
+        margin: 0 auto
+
+        +res('mob')
+            max-width: 100%
+            padding: 6px 0 25px 0
+        .mad_title__balls
+            width: 100vw
+            left: 50%
+            margin-left: -40vw
+        h2
+            margin-top: 42px
+            margin-bottom: 32px
+            font: 50px $light
+            line-height: 48px
+            color: #2e2e2e
+            +res('mob')
+                margin-top: 38px
+                margin-bottom: 15px
+
+                font-size: 22px
+                line-height: 32px
+
+        h3
+            margin-top: 32px
+            margin-bottom: 28px
+
+            font: 34px $light
+            line-height: 48px
+            color: #2e2e2e
+
+            +res('mob')
+                margin-top: 17px
+                margin-bottom: 15px
+
+                font-size: 18px
+                line-height: 30px
+
+        h4
+            margin: 24px 0
+
+            font: 26px $light
+            line-height: 40px
+            color: #2e2e2e
+
+            +res('mob')
+                margin: 15px 0 12px 0
+
+                font-size: 15px
+                line-height: 28px
+
+        ul
+            margin-top: 24px
+            margin-bottom: 31px
+
+            +res('mob')
+                margin-top: 14px
+                margin-bottom: 16px
+
+        li
+            position: relative
+
+            padding-left: 34px
+
+            font: 15px $light
+            line-height: 36px
+            color: #333333
+
+            +res('mob')
+                padding-left: 15px
+                margin-bottom: 17px
+
+                font-size: 11px
+                line-height: 20px
+
+                &:last-child
+                    margin-bottom: 0
+
+            &:before
+                content: ''
+                display: block
+
+                position: absolute
+                top: 50%
+                left: 4px
+                transform: translateY(-50%)
+
+                width: 6px
+                height: 6px
+                border-radius: 100%
+
+                background-color: $green
+
+                +res('mob')
+                    top: 5px
+                    left: 0
+                    transform: none
+
+        p
+            font: 15px $light
+            line-height: 28px
+            color: #333333
+
+            +res('mob')
+                font-size: 11px
+                line-height: 20px
+
+        span
+            display: block
+            margin-bottom: 34px
+
+            font: 15px $light
+            line-height: 28px
+            color: #333333
+
+            a
+                display: inline-block
+
+            +res('mob')
+                margin-bottom: 20px
+
+                font-size: 11px
+                line-height: 20px
+
+        a
+            font: 15px $book
+            line-height: 28px
+            text-decoration: underline
+            color: $green
+
+            +res('mob')
+                display: block
+
+                font-size: 11px
+                line-height: 20px

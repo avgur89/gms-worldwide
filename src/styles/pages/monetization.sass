@@ -1,0 +1,495 @@
+[data-page='monetization']
+	.sub_first_screen
+		position: relative
+		padding: 101px 0 110px
+
+		+res('mob')
+			padding: 80px 0 40px
+
+		&__title
+			margin: 46px 0 25px
+
+			+res('mob')
+				margin: 30px 0 18px
+
+		&__description
+			width: 645px
+
+		&:after
+			content: ''
+			display: block
+
+			position: absolute
+			top: 0
+			left: 0
+
+			width: 100%
+			height: 100%
+
+			background-color: #000000
+			opacity: 0.5
+
+
+	.video
+		padding-top: 92px
+
+		&__main
+			+cover-video
+			height: 310px
+			width: 100%
+
+			margin-bottom: 41px
+
+			background-size: cover
+			background-position: center center
+
+			overflow: hidden
+
+			+res('desk-min')
+				background: none
+
+			//+res('tam')
+			//	video, object-fit
+			//		display: none!important
+
+			+res('tam')
+				width: 100%
+				height: auto
+
+				margin-bottom: 26px
+
+			+res('mob')
+				margin-bottom: 26px
+
+			video
+				position: relative
+				left: -5px
+
+		&__title
+			margin-bottom: 18px
+
+		&__list
+			margin-bottom: 38px
+
+			+res('mob')
+				margin-bottom: 23px
+
+			&-item
+				position: relative
+				padding-left: 33px
+
+				font: 15px $light
+				line-height: 36px
+
+				color: #333333
+
+				+res('mob')
+					margin-bottom: 14px
+					padding-left: 20px
+
+					font-size: 11px
+					line-height: 20px
+
+					&:last-child
+						margin-bottom: 0
+
+				&:before
+					content: ''
+					display: block
+
+					position: absolute
+					left: 0
+					top: 50%
+					transform: translateY(-50%)
+
+					width: 6px
+					height: 6px
+					border-radius: 100%
+
+					background-color: $green
+
+					+res('mob')
+						top: 4px
+						transform: none
+
+		&__frame
+			position: relative
+
+			display: flex
+			justify-content: center
+			align-items: center
+
+			height: 434px
+			margin-bottom: 45px
+
+			background-repeat: no-repeat
+			background-position: center center
+			background-size: cover
+
+			+res('tam')
+				height: 398px
+			+res('mob')
+				height: 169px
+				margin-bottom: 26px
+
+			&:after
+				content: ''
+				display: block
+
+				position: absolute
+				top: 0
+				left: 0
+
+				width: 100%
+				height: 100%
+
+				background-color: #000000
+				opacity: 0.5
+
+	.solution
+		&__desc
+			margin-bottom: 32px
+
+			font: 15px $light
+			line-height: 28px
+			color: #333333
+
+			+res('mob')
+				margin-bottom: 16px
+
+				font-size: 11px
+				line-height: 20px
+
+		&__subtitle
+			margin-bottom: 52px
+
+			font: 26px $light
+			line-height: 36px
+			color: #2e2e2e
+
+			+res('mob')
+				margin-bottom: 20px
+
+				font-size: 15px
+				line-height: 28px
+
+		&__img
+			display: block
+			max-width: 100%
+			height: 240px
+
+			margin: 0 auto 30px auto
+
+			+res('mob')
+				height: 136px
+				margin-bottom: 21px
+
+	.stages
+		margin-bottom: 90px
+
+		+res('mob')
+			margin-bottom: 42px
+
+		&__subtitle
+			margin-bottom: 36px
+
+			font: 26px $light
+			line-height: 36px
+			color: #2e2e2e
+			span
+				color: $green
+
+			+res('mob')
+				margin-bottom: 20px
+
+				font-size: 15px
+				line-height: 28px
+
+		&__img
+			display: block
+			margin: 0 auto 43px auto
+
+			max-width: 100%
+			height: 277px
+
+			+res('mob')
+				height: 125px
+				margin-bottom: 23px
+
+		&__desc
+			margin-bottom: 34px
+
+			font: 15px $light
+			line-height: 28px
+			color: #333333
+
+			+res('mob')
+				font-size: 11px
+				line-height: 20px
+
+		&__inner
+			margin-bottom: 43px
+
+			+res('mob')
+				margin-bottom: 27px
+
+		&__stage
+			padding-top: 42px
+			padding-bottom: 46px
+			border-bottom: 1px solid #e5e3e3
+
+			&.active_stage
+				.stages__stage-wrapper
+					height: 1447px
+
+			+res('mob')
+				padding-top: 22px
+				padding-bottom: 25px
+
+			&:first-child
+				border-top: 1px solid #e5e3e3
+
+			&-bg
+				height: 300px
+				margin-bottom: 43px
+
+				background-color: #fbf9f9
+
+				img
+					width: 100%
+					height: 100%
+					min-height: 100%
+					object-fit: cover
+					font-family: 'object-fit: cover;'
+
+				+res('tab-l')
+					height: 283px !important
+				+res('tab')
+					height: 270px
+				+res('mob-l')
+					height: 275px !important
+				+res('mob')
+					height: 160px
+					margin-bottom: 23px
+
+			&_btn
+				position: relative
+				overflow: hidden
+				display: inline-block
+				font: 11px $semi
+				line-height: 20px
+				text-transform: uppercase
+				letter-spacing: 1.54px
+				color: $green
+				span
+					display: block
+					transition: transform .3s ease
+					transform: translateY(0)
+				+res('desk-min')
+					&:hover
+						span
+							transform: translateY(100%)
+						&:before
+							transform: translateY(0)
+				&:before
+					content: attr(data-hover)
+					position: absolute
+					left: 0
+					top: 0
+					right: 0
+					width: 100%
+					color: #333333
+					transform: translateY(-100%)
+					transition: transform .3s ease
+
+			&-wrapper
+				position: relative
+				height: 260px
+				overflow: hidden
+
+				transition: 0.6s ease
+
+				+res('mob')
+					height: 216px
+
+				&.is-active
+					&:after
+						display: none
+
+				&:after
+					content: ''
+					display: block
+
+					position: absolute
+					bottom: 0
+					left: 0
+
+					width: 100%
+					height: 130px
+					background-image: linear-gradient(to top, #ffffff 0%, rgba(255, 255, 255, 0) 100%)
+
+			&-title
+				margin-bottom: 30px
+
+				font: 34px $light
+				line-height: 48px
+				color: #333333
+				span
+					color: $green
+
+				+res('mob')
+					margin-bottom: 13px
+
+					font-size: 18px
+					line-height: 34px
+
+			&-desc
+				margin-bottom: 34px
+
+				font: 15px $light
+				line-height: 28px
+				color: #333333
+
+				+res('mob')
+					margin-bottom: 16px
+
+					font-size: 11px
+					line-height: 20px
+
+			&-subtitle
+				margin-bottom: 27px
+
+				font: 26px $light
+				line-height: 36px
+				color: #2e2e2e
+
+				+res('mob')
+					margin-bottom: 15px
+
+					font-size: 15px
+					line-height: 28px
+
+			&-list
+				margin-bottom: 30px
+
+				+res('mob')
+					margin-bottom: 20px
+
+			&-item
+				position: relative
+				padding-left: 33px
+
+				font: 15px $light
+				line-height: 36px
+				color: #333333
+
+				+res('mob')
+					padding-left: 20px
+					margin-bottom: 14px
+
+					font-size: 11px
+					line-height: 20px
+
+					&:last-child
+						margin-bottom: 0
+
+				&:before
+					content: ''
+					display: block
+
+					position: absolute
+					left: 0
+					top: 50%
+					transform: translateY(-50%)
+
+					width: 6px
+					height: 6px
+					border-radius: 100%
+
+					background-color: $green
+
+					+res('mob')
+						top: 4px
+						transform: none
+
+			&-links
+				display: flex
+				justify-content: space-between
+				align-items: center
+
+				padding-top: 5px
+
+				.show_more,
+				.hide_stage
+					flex: 0 1 50%
+					display: none
+				.hide_stage
+					flex: 1 1 auto
+					text-align: right
+	.services
+		padding: 19px 0 62px 0
+		background-color: #2e2e2e
+
+		+res('mob')
+			padding: 27px 0 10px 0
+
+		&__subtitle
+			margin-bottom: 14px
+
+			font: 11px $semi
+			line-height: 72.34px
+			text-transform: uppercase
+			letter-spacing: 1.54px
+			color: #ffffff
+
+			+res('mob')
+				line-height: 20px
+
+		&__link
+			position: relative
+
+			display: inline-block
+			margin-right: 46px
+
+			font: 26px $light
+			line-height: 30px
+			color: #ffffff
+
+			transition: all .4s ease
+
+			+res('mob')
+				display: block
+
+				margin-right: 0
+				margin-bottom: 10px
+
+				font-size: 18px
+				line-height: 30px
+
+			&:after
+				content: ''
+				display: block
+
+				position: absolute
+				bottom: 0
+				left: 0
+
+				width: 100%
+				height: 1px
+
+				background-color: $green
+				transition: all .4s ease
+
+				opacity: 0
+
+			+res('desk-min')
+				&:hover
+					color: $green
+					&:after
+						opacity: 1
+
+			&:last-child
+				margin-right: 0
+
+			&.is-active
+				color: #696868

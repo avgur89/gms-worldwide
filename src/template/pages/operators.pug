@@ -1,0 +1,314 @@
+extends ../extend/default
+
+block variables
+    - var title = 'Operators';
+block header
+block main
+    include ../partials/_preloader
+    main.content(data-page='operators')
+        +header()
+        section.sub_first_screen(style='background-image: url(static/img/sub_first_screen_bg.jpg);')
+            .container
+                .breadcrumb
+                    ul
+                        li
+                            a(href='./home.html') Home
+                        li
+                            | Operators
+                .sub_first_screen__title.uikit__large_title
+                    h2 Operators
+                    .sub_first_screen__balls
+                .sub_first_screen__description
+                    p.uikit__paragraph GMS is the one-stop shop for mobile operators: with our broad global coverage and strong expertise in messaging, we provide various types of solutions to cater for your every need.
+        section.offer
+           .container
+               .offer__flex
+                   .offer__title.mad_title.uikit__large_title
+                       .mad_title__balls
+                       h3 What we offer
+                   .offer__right
+                       p Relying on over 11 years of messaging expertise GMS can help to increase operators’ revenues and establish control over their traffic through designing custom-made solutions tailored to each operator`s needs. GMS is the largest GSMA Compliant SMS Hub Provider in the CIS with coverage of 100% (A2P and P2P) in this region. Our global network includes over 900 operators across 200 countries, and over 200 operators connected directly to GMS. Choosing GMS, you choose progress.
+           .video_nav__items
+               .video_nav__item
+                   .video(style='background-image: url(static/video/video_nav/messaging_services.jpg);')
+                       video(autoplay='', muted='', loop='', poster='static/video/video_nav/messaging_services.jpg')
+                           source(src='static/video/video_nav/messaging_services.webm', type='video/webm')
+                           source(src='static/video/video_nav/messaging_services.mp4', type='video/mp4')
+                   .video_nav__text.offer__item_text
+                       .offer__item_title
+                           .drawn_text
+                               .drawn_text__overflow
+                                   h3.uikit__title Messaging services
+                       p.uikit__paragraph Drawing upon 11 years of experience in the messaging industry, GMS relentlessly analyses the trends to see the bigger picture of the industry. The telecommunications universe is changing at a fast pace, and we seek out the most promising business opportunities among emerging trends. Despite the decline in P2P traffic taken over by OTT messengers, SMS remains a key channel and is still growing significantly, driven by the surge experienced by A2P. When used together with P2A, A2P becomes even more powerful, creating 2-way communication channel. The growth trend is reflected by industry forecasts expecting a compound annual market growth rate of 36%. The A2P SMS market is currently estimated to be worth $70.32 Billion USD by 2020. And we know exactly how to make the best of it.
+                       // temp change
+                       //+link-balls('learn more')(href='#', className='offer__item_link', colorBalls='#333')
+               .video_nav__item
+                   .video(style='background-image: url(static/video/video_nav/monetization_solution.jpg);')
+                       video(autoplay='', muted='', loop='', poster='static/video/video_nav/monetization_solution.jpg')
+                           source(src='static/video/video_nav/monetization_solution.webm', type='video/webm')
+                           source(src='static/video/video_nav/monetization_solution.mp4', type='video/mp4')
+                   .video_nav__text.offer__item_text
+                       .offer__item_title
+                           .drawn_text
+                               .drawn_text__overflow
+                                   h3.uikit__title Monetization solution
+                       p.uikit__paragraph According to Juniper Research, over 50% of Mobile Operators do not have full control of the volumes of their international messaging traffic which results in around 65% of all A2P SMS traffic terminating through grey routes. This traffic overloads the networks of MNOs and takes a toll on the end customer’s experience which, in turn, threatens the MNOs’ reputation. Ultimately, the chaotic downpour of unmonetized traffic causes operators to lose significant revenue. GMS turns chaos into order. We help our clients block grey routes securing the network for legitimate traffic only, and to increase revenues. In 2017 GMS’ monetization solutions have been ranked at a high score of 4.27/5 by Rocco Research.
+                       +link-balls('learn more')(href='./monetization.html', className='offer__item_link', colorBalls='#333')
+        section.coverage
+            .container
+                .coverage__content
+                    //+link-balls('Explore our worldwide coverage')(href='#', className='coverage__link')
+                    .coverage__separate_wrap
+                        .coverage__flex
+                            .coverage__description
+                                h3.uikit__large_title Coverage
+                                p.uikit__paragraph GMS is a global company with strong expertise in messaging services. Pioneers in both A2P and P2P monetization, we are a global messaging leader. By helping you discover your potential we are constantly expanding and improving our network.
+                            .coverage__progress
+                                .list
+                                    .list__item
+                                        strong 200
+                                        span countries
+                                    .list__separate
+                                        i
+                                        i
+                                        i
+                                    .list__item
+                                        strong 900
+                                        span operators connected
+                                    .list__separate
+                                        i
+                                        i
+                                        i
+                                    .list__item
+                                        strong 200
+                                        span connected directly
+                                p.uikit__paragraph Over the years we have built up a strong network spanning across 200 countries and connecting about 900 operators worldwide, 200 of which are connected directly to GMS.
+        section.level_up
+            .convex_particles
+            .container
+                .level_up__title.title--js
+                    h3.uikit__title We help our clients move to the next level
+                .level_up__scroll
+                    .level_up__items
+                        .level_up__item
+                            .drawn_text
+                                .drawn_text__overflow
+                                    h2 Quality
+                            .level_up__text
+                                p.uikit__paragraph We set and provide the highest quality and transparency standards on the market.
+                        .level_up__item
+                            .drawn_text
+                                .drawn_text__overflow
+                                    h2 Turnkey
+                            .level_up__text
+                                p.uikit__paragraph We deliver efficient, cutting-edge turnkey solutions in an easy and accessible way.
+                        .level_up__item
+                            .drawn_text
+                                .drawn_text__overflow
+                                    h2 Tailored
+                            .level_up__text
+                                p.uikit__paragraph We develop unique, tailored solutions to fit our partners specific business needs.
+                // temp change
+                //.level_up__bottom
+                //    +link-balls('learn more')(href='#', className='level_up__link', colorBalls='#333')
+        section.personal_education
+            .container
+                .personal_education__title.title--js
+                    h3.uikit__title Trainings
+                p.uikit__paragraph We want you to stay on top of the cutting-edge messaging technologies, that’s why GMS regularly provides educational training to share our expertise. We believe in an individual approach: every partner is offered a unique training program designed specifically for their needs and tailored to cover the topics which are relevant.
+                a.rect_btn.rect_btn--green(href='#', data-form-anchor='#action_form')
+                    .rect_btn__balls(data-color='#3db565')
+                    span Book training
+        section.cases
+            .container
+                .cases__title.mad_title
+                    .mad_title__balls
+                    h3.uikit__title Use Cases
+                .cases__items
+                    .cases__item
+                        // temp change
+                        //a(href='#')
+                        .cases__img
+                            .img
+                                img(src='static/img/event3.jpg')
+                        .cases__logo
+                            .img
+                                img(src='static/img/clients/client11.png', class='grayscale')
+                        .cases__description
+                            h4
+                                span.inline_underline Establish control over traffic transparency and monetize the SMS channel, stop huge rates of A2P traffic termination through grey routes.
+                            .cases__hidding.js-slide-toggle--content
+                                h5 Solution:
+                                p Firewall was deployed, managed, and regularly updated, allowing to identify and block the illegitimate traffic algorithms. Remote management of international SMS business was established. Smart pricing policy grounded in market trends was implemented.
+                                h5 Impact:
+                                p Restricting spam and illegitimate traffic provided full visibility of the messaging volumes. Capital and operational costs reduction, combined with maximized A2P and P2P traffic monetization allowed the profits from messaging to increase by up to 2400% of incremental revenue growth.
+                            +link-balls('learn more')(href='#', className='js-slide-toggle--link', colorBalls='#333', toggleText='hide info')
+                    .cases__item
+                        // temp change
+                        //a(href='#')
+                        .cases__img
+                            .img
+                                img(src='static/img/event1.jpg')
+                        .cases__logo
+                            .img
+                                img(src='static/img/clients/client7.png', class='grayscale')
+                        .cases__description
+                            h4
+                                span.inline_underline Apply "smart" pricing policy and secure the network to prevent revenue losses and increase profits. Take control of international A2P traffic previously terminated entirely through grey routes.
+                            .cases__hidding.js-slide-toggle--content
+                                h5 Solution:
+                                p Network testing and monitoring combined with a flexible Firewall solution allowed to detect and block of grey routes.  International P2P traffic was migrated to the GMS HUB. Contracts with local A2P aggregators and roaming partners were revised. A more efficient pricing policy was implemented.
+                                h5 Impact:
+                                p Operational costs were reduced.  International P2P traffic became fully secured and transparent. Local A2P links were taken under control to enable maximum monetization of international A2P SMS traffic. Subscribers' security was improved by restricting international traffic termination exclusively through monetized channels with original Sender IDs and content. Monetization of international A2P SMS allowed for incremental revenue growth of 946%.
+                            +link-balls('learn more')(href='#', className='js-slide-toggle--link', colorBalls='#333', toggleText='hide info')
+                    .cases__item
+                        // temp change
+                        //a(href='#')
+                        .cases__img
+                            .img
+                                img(src='static/img/event2.jpg')
+                        .cases__logo
+                            .img
+                                img(src='static/img/clients/client8.png', class='grayscale')
+                        .cases__description
+                            h4
+                                span.inline_underline Gain visibility in the international A2P traffic, prevent revenue losses due to traffic termination via grey routes.
+                            .cases__hidding.js-slide-toggle--content
+                                h5 Solution:
+                                p Proactive network monitoring and tests enabled the operator to detect and block grey route traffic. International P2P traffic was migrated to GMS HUB which allowed to keep the network secure at all times, and new types of traffic were attracted after negotiations with the international market. Contracts with local A2P aggregators were revised.
+                                h5 Impact:
+                                p International A2P and P2P traffic became protected and fully monetized. SMS business grew due to new types of traffic attracted to the now secured network. Reduction of operational costs and transparency of international P2P traffic exchange, combined with a 100% A2P traffic monetization allowed incremental revenue to grow by more than 700%.
+                            +link-balls('learn more')(href='#', className='js-slide-toggle--link', colorBalls='#333', toggleText='hide info')
+        section.events
+            .container
+                .events__title.mad_title
+                    .mad_title__balls
+                    h3.uikit__title Upcoming events
+                .events__items
+                    .events__item
+                        a(href='http://www.capacityconferences.com/Messaging-SMS', target='_blank')
+                            .events__img
+                                .img_group
+                                    .img
+                                        img(src='static/img/event5.jpg')
+                                    .img
+                                        img(src='static/img/event5.jpg')
+                                    .img
+                                        img(src='static/img/event5.jpg')
+                            .events__top
+                                .events__date
+                                    h3 28-29 November 2017
+                                .events__location.drawn_text
+                                    .drawn_text__overflow
+                                        h3 Congress Center, London
+                            .events__description
+                                p Messaging&SMS World
+                                .events__description_balls
+                    .events__item
+                        a(href='https://www.mobileworldcongress.com/', target='_blank')
+                            .events__img
+                                .img_group
+                                    .img
+                                        img(src='static/img/event6.jpg')
+                                    .img
+                                        img(src='static/img/event6.jpg')
+                                    .img
+                                        img(src='static/img/event6.jpg')
+                            .events__top
+                                .events__date
+                                    h3 26 Feb - 01 Mar 2018
+                                .events__location.drawn_text
+                                    .drawn_text__overflow
+                                        h3 Barcelona, Spain
+                            .events__description
+                                p Mobile World Congress
+                                .events__description_balls
+                    .events__item
+                        a(href='https://infocentre2.gsma.com/_layouts/InfoCentre/Login.aspx?ReturnUrl=%2fgp%2fwg%2fWA%2f_layouts%2fAuthenticate.aspx%3fSource%3d%252Fgp%252Fwg%252FWA%252FPages%252FDefault%252Easpx&amp;Source=%2Fgp%2Fwg%2FWA%2FPages%2FDefault%2Easpx', target='_blank')
+                            .events__img
+                                .img_group
+                                    .img
+                                        img(src='static/img/event7.jpg')
+                                    .img
+                                        img(src='static/img/event7.jpg')
+                                    .img
+                                        img(src='static/img/event7.jpg')
+                            .events__top
+                                .events__date
+                                    h3 19-22 March 2018
+                                .events__location.drawn_text
+                                    .drawn_text__overflow
+                                        h3 Grand Hyatt Dubai, UAE
+                            .events__description
+                                p WAS#7
+                                .events__description_balls
+        // temp change
+        //section.articles
+        //    .container
+        //        .articles__title.mad_title
+        //            .mad_title__balls
+        //            h3.uikit__title Expertise articles
+        //        .articles__items
+        //            .articles__item
+        //                a(href='#')
+        //                    h4
+        //                        span.inline_underline Mobile World Congress
+        //                    p For a real estate agent in pursuit of a hot lead, speed is everything. According to a study by Dr. James Oldroyd of MIT, an agent’s odds of successfully contacting an online lead are 100 times higher.
+        //            .articles__item
+        //                a(href='#')
+        //                    h4
+        //                        span.inline_underline 2017 Competitive Carriers Association (CCA) Annual Convention
+        //                    p For a real estate agent in pursuit of a hot lead, speed is everything. According to a study by Dr. James Oldroyd of MIT, an agent’s odds of successfully contacting an online lead are 100 times higher.
+        //            .articles__item
+        //                a(href='#')
+        //                    h4
+        //                        span.inline_underline Mobile World Congress
+        //                    p For a real estate agent in pursuit of a hot lead, speed is everything. According to a study by Dr. James Oldroyd of MIT, an agent’s odds of successfully contacting an online lead are 100 times higher.
+        //        .articles__bottom
+        //            +link-balls('see more')(href='#', className='articles__link', colorBalls='#333')
+        section.action(id='action_form')
+            .action__close
+                +svg('close-ico')
+            .action__overflow
+                .action__convex_particles
+                .actiion__slides
+                    .action__slide
+                        .action__slide_content
+                            .container
+                                p Ready to leap towards success?
+                    .action__slide
+                        .action__slide_content
+                            .container
+                                p Our team is ready get in touch with you
+                            .action__dropdown
+                                .container
+                                    form
+                                        .form-group.form_item.input_wrap.has-success
+                                            label(for='input1') Name
+                                            input(id='input1')
+                                            .help-block write correct name
+                                        .form-group.form_item.input_wrap.has-error
+                                            label(for='input2') Phone
+                                            input(id='input2')
+                                            .help-block write correct phone
+                                        .form-group.form_item.input_wrap
+                                            label(for='input3') E-mail
+                                            input(id='input3')
+                                            .help-block write correct e-mail
+                                        .form-group.form_item.textarea_wrap.has-error
+                                            label(for='input4') Tell us more about your request
+                                            textarea(id='input4')
+                                            .help-block write correct text
+                                        .form-group.checkbox_wrap
+                                            input(type='checkbox', name='checkbox', id='checkbox1')
+                                            label(for='checkbox1') I agree to the Terms and Conditions of processing personal data
+                                        button.rect_btn
+                                            span Get in touch
+                                            .rect_btn__balls
+                    .action__slide
+                        .action__slide_content
+                            .container
+                                p Thanks!
+
+
+

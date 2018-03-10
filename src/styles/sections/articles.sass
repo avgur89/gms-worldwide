@@ -1,0 +1,48 @@
+.articles
+    background: #fff
+    padding: 90px 0 42px
+    +res('mob')
+        padding: 25px 0 40px
+    &__title
+        margin-bottom: 28px
+        +res('mob')
+            margin-bottom: 10px
+    .uikit__title
+        text-align: left
+    &__bottom
+        text-align: right
+        +res('mob')
+            text-align: left
+            margin-top: 70px
+        .articles__link
+            margin-right: 32px
+    &__items
+        +flex(row, wrap, space-between, stretch)
+        margin: 0 -15px
+    &__item
+        width: 360px
+        //padding-right: 15px
+        margin-bottom: 30px
+        padding: 0 15px
+        +res('tam')
+            display: none
+            &:nth-child(1), &:nth-child(2)
+                display: block
+        +res('mob')
+            margin-bottom: 10px
+        a
+            +res('desk-min')
+                &:hover
+                    .inline_underline
+                        background-size: 100% 1px
+        h4
+            font: 18px $light
+            line-height: 34px
+            letter-spacing: 0.81px
+            color: $green
+            margin-bottom: 13px
+        p
+            color: #262626
+            font: 11px $light
+            line-height: 20px
+            letter-spacing: 0.35px

@@ -1,0 +1,21 @@
+
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+<style type="text/css">
+	.about_us_ico .st0{fill:#00AD50;}
+	.about_us_ico .st1{fill:none;stroke:#212322;stroke-width:2;stroke-miterlimit:10;}
+</style>
+<g class="about_us_ico">
+	<g>
+		<circle class="st0" cx="27.6" cy="24.2" r="1.4"/>
+	</g>
+	<g>
+		<circle class="st0" cx="36.7" cy="24.2" r="1.4"/>
+	</g>
+	<g>
+		<circle class="st0" cx="41.6" cy="24.2" r="1.4"/>
+	</g>
+	<polyline class="st1" points="36.7,39.3 4.3,24.3 36.7,9.1 	"/>
+	<path class="st1" d="M28.2,12.5c2.4,3.3,3.7,7.3,3.7,11.6c0,4.1-1.2,7.9-3.4,11.1"/>
+</g>
+</svg>

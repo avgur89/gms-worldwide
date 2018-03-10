@@ -1,0 +1,42 @@
+.preloader 
+    height: 100vh
+    width: 100vw
+    position: fixed
+    background: #262626
+    z-index: 9999
+    left: 0
+    top: -80px
+    padding-bottom: 80px
+    transform: translateY(80px)
+    box-sizing: content-box
+    &__center
+        +flex(row, wrap, center, center)
+        position: relative
+        height: 100%
+    &.is_hidden
+        display: none
+    canvas
+        display: block
+    &__balls 
+        width: 100%
+        height: calc(100% - 20px)
+        position: absolute
+        top: 0
+        left: 0
+    &__logo 
+        margin-top: auto
+        opacity: 0
+        margin-bottom: 70px
+        +res('mob')
+            margin-bottom: 40px
+        &.is-ready 
+            opacity: 1
+        svg 
+            display: block
+            width: 140px
+            height: 47px
+            margin: 0 auto
+body
+    background: #242424
+    &.page_lock
+        overflow: hidden

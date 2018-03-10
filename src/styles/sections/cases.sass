@@ -1,0 +1,95 @@
+.cases
+    padding: 90px 0 75px
+    background-color: #e8e8e8
+    +res('tam')
+        padding-bottom: 95px
+    +res('mob')
+        padding: 25px 0 35px
+    &__title
+        margin-bottom: 38px
+        +res('mob')
+            margin-bottom: 20px
+    .uikit__title
+        text-align: left
+        color: #333
+    &__description
+        h4
+            font: 14px $light
+            line-height: 20px
+            color: $green
+            margin-bottom: 10px
+            letter-spacing: 0.38px
+            +res('mob')
+                margin-bottom: 15px
+        p, h5
+            font: 11px $light
+            line-height: 20px
+            color: #2a2a2a
+            letter-spacing: 0.3px
+            margin-bottom: 5px
+        h5
+            color: $green
+            margin-bottom: 0
+            font-size: 12px
+    &__logo
+        height: 54px
+        position: relative
+        background: #fff
+        margin-bottom: 16px
+        img
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            max-height: 60%
+            max-width: 100px
+    &__img
+        .img
+            height: 142px
+            position: relative
+            overflow: hidden
+        +cover-img
+            height: 100%
+            display: block
+            transition: 1s cubic-bezier(0.215, 0.61, 0.355, 1)
+    &__items
+        +flex(row, nowrap, space-between, stretch)
+        margin: 0 -15px
+        +res('tam')
+            margin: 0 -21px
+        +res('mob')
+            margin: 0 -15px
+
+    &__item
+        flex: 0 1 365px
+        width: calc(100% / 3)
+        margin: 0 15px
+        .js-slide-toggle--content
+            display: none
+            +res('mob')
+                display: block!important
+        .js-slide-toggle--link
+            margin-top: 10px
+            +res('mob')
+                display: none
+        +res('tam')
+            margin: 0 21px
+        a
+            &:hover
+                +res('desk-min')
+                    .cases__img img
+                        transform: scale(1.15)
+                    h4
+                        span
+                            background-size: 100% 1px
+
+        +res('tam')
+            display: none
+            &:nth-child(1), &:nth-child(2)
+                display: block
+        +res('mob')
+            width: 365px!important
+            max-width: calc(100% - 30px)
+            display: block!important
+            margin: 0 15px
+            padding-bottom: 15px

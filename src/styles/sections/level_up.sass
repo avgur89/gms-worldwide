@@ -1,0 +1,72 @@
+.level_up
+    background-color: #fbf9f9
+    padding: 92px 0 73px
+    overflow: hidden
+    position: relative
+    transform: translate3d(0px, 0px, 0px)
+    +res('desk')
+        padding-bottom: 45px
+    +res('tam')
+        padding-bottom: 45px
+    +res('mob')
+        padding-top: 32px
+    .link_with_balls
+        a:before
+            color: #333
+    .container
+        position: relative
+        z-index: 2
+    &__title
+        margin: 0 auto 48px
+        text-align: center
+        width: 420px
+        max-width: 100%
+        +res('mob')
+            text-align: left
+            width: 100%
+            margin-bottom: 15px
+    &__scroll
+        +res('tam')
+            overflow-x: auto
+            margin-right: -30px
+    &__items
+        +flex(row, nowrap, flex-start, strench)
+        +res('tam')
+            min-width: 1310px
+        +res('mob')
+            flex-wrap: wrap
+            min-width: 1px
+            margin-bottom: 25px
+    &__item
+        width: calc(100% / 3)
+        padding-right: 50px
+        margin-bottom: 58px
+        box-sizing: border-box
+        +res('tam')
+            margin-bottom: 30px
+        +res('mob')
+            width: 100%
+            margin-bottom: 15px
+        h2
+            color: $green
+            font: 100px $ulight
+            line-height: 156px
+            +res('desk')
+                font-size: 95px
+                letter-spacing: 1.5px
+            +res('mob')
+                font: 36px $light
+                line-height: normal
+
+    &__text
+        p
+            margin-top: -4px
+            +res('mob')
+                font-size: 11px
+                margin-top: 5px
+                line-height: 20px
+    &__bottom
+        text-align: right
+        margin-right: 43px
+        +res('mob')
+            text-align: left

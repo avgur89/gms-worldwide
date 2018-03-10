@@ -1,0 +1,62 @@
+.offer
+    padding: 87px 0 0
+    +res('mob')
+        padding: 45px 0 0
+    &__flex
+        +flex(row, nowrap, space-between, flex-start)
+        padding-bottom: 88px
+        +res('tam')
+            flex-wrap: wrap
+        +res('mob')
+            padding-bottom: 42px
+    &__right
+        width: 545px
+        padding-left: 15px
+        font: 18px $light
+        line-height: 34px
+        flex-shrink: 0
+        padding-top: 13px
+        +res('tam')
+            width: 100%
+            padding-left: 0
+            padding-top: 25px
+        +res('mob')
+            font-size: 11px
+            line-height: 20px
+            padding-top: 16px
+    &__title
+        flex-grow: 1
+        width: auto
+        .mad_title__balls
+            width: 100vw
+    &__item_link
+        margin-top: 28px
+        margin-bottom: 6px
+        +res('tam')
+            margin-bottom: 10px
+        +res('mob')
+            margin-top: 38px
+        a .hover
+            color: #333
+            svg
+                stroke: #eee
+    &__item_text
+        .uikit__title
+            text-align: left
+            color: $green
+            +res('mob')
+                font-size: 34px
+                line-height: 48px
+    &__item_title
+        padding-top: 30px
+        padding-bottom: 28px
+        +res('mob')
+            padding: 10px 0 12px
+
+
+
+
+
+
+
+

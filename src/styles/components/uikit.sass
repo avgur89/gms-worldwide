@@ -1,0 +1,419 @@
+.circle_play
+    width: 113px
+    height: 113px
+    transition: box-shadow .8s
+    display: block
+    border-radius: 50%
+    //overflow: hidden
+    position: relative
+    box-shadow: 0 0 35px #ffffff
+    &--js
+        box-shadow: 0 0 0 #ffffff
+        &.shadow_on
+            box-shadow: 0 0 35px #ffffff
+    svg path
+        transition: 0s !important
+    svg
+        z-index: 2
+        position: relative
+    canvas
+        opacity: 0
+        width: 140%
+        height: 140%
+        top: -20%
+        left: -20%
+        position: absolute
+        z-index: 1
+    +res('desk-min')
+        &:hover
+            transition: 0s
+            box-shadow: none !important
+            svg circle
+                transition: 0s !important
+                fill: transparent
+            svg path
+                fill: #fff
+            canvas
+                opacity: 1
+
+        &:hover
+            svg
+                path
+                    fill: #fff
+    svg
+        width: calc(100% + 20px)
+        height: calc(100% + 20px)
+        margin-top: -10px
+        margin-left: -10px
+    g
+        circle
+            fill: #fff
+            transition: fill .4s
+        path
+            fill: #e4e1e0
+            transition: fill .4s
+
+.mad_title
+    position: relative
+    text-align: left
+    &__balls
+        width: 130%
+        margin-left: -30%
+        top: 0px
+        height: 100%
+        left: 0px
+        +res('mob')
+            margin-left: 0
+            top: -10px
+        &--many
+            top: -25px
+            width: 100vw
+            margin-left: -50vw
+            left: 50%
+            min-height: 70px
+            +res('mob')
+                left: 0
+.checkbox_wrap
+    position: relative
+    margin-top: 20px
+    input
+        width: 1px
+        height: 1px
+        visibility: hidden
+        position: absolute
+        top: 0px
+        left: 0px
+        &:checked + label:before
+            background: #fff url(../img/checked.png) no-repeat center center
+            background-size: 80% 80%
+    label
+        color: #ffffff
+        font: 18px $light
+        padding-left: 35px
+        text-align: left
+        display: block
+        position: relative
+        +res('mob')
+            font-size: 11px
+            &:before
+                width: 14px
+                height: 14px
+                margin-top: -7px
+        &:before
+            position: absolute
+            content: ''
+            width: 18px
+            height: 18px
+            left: 0px
+            top: 50%
+            margin-top: -9px
+            background: #ffffff
+
+.form_item
+    font: 18px $light
+    line-height: 34px
+    color: #fff
+    text-align: left
+    height: 52px
+    position: relative
+    .help-block
+        opacity: 0
+        position: absolute
+        top: 50%
+        left: calc(100% + 12px)
+        width: auto
+        white-space: nowrap
+        color: #262626
+        font: 12px $light
+        transform: translateY(-50%) translateX(-20px)
+        transition: .3s
+        +res('mob')
+            top: 100%
+            left: 0
+            transform: translate(0, 0) !important
+    &.has-success, &.has-focus
+        label
+            color: #000
+        &:after
+            border-top-color: #000
+    &.has-error
+        input
+            color: #f94600
+        &:after
+            border-top-color: #f94600
+        .help-block
+            opacity: 1
+            transform: translateY(-50%) translateX(0px)
+
+    +res('mob')
+        height: 40px
+        font-size: 11px
+        line-height: 18px
+    &:after
+        position: absolute
+        content: ''
+        border-top: 1px solid #ffffff
+        box-sizing: border-box
+        bottom: 0px
+        left: 0px
+        width: 100%
+        transition: .3s
+        height: 0px
+    &.input_wrap
+        label
+            height: 100%
+            position: absolute
+            pointer-events: none
+            left: 0px
+            top: 0px
+            +flex(row, wrap, flex-start, center)
+    &.textarea_wrap
+        height: auto
+        padding-top: 13px
+    textarea
+        background: none
+        box-sizing: border-box
+        display: block
+        resize: none
+        border: none
+        outline: none
+        height: 94px
+        font: inherit
+        color: inherit
+        padding: 12px 0
+        width: 100%
+        +res('tam')
+            font-size: 16px
+            line-height: 20px
+        +res('mob')
+            height: 90px
+    input
+        height: 100%
+        display: block
+        width: 100%
+        box-sizing: border-box
+        background: none
+        border: none
+        outline: none
+        font: inherit
+        padding-left: 100px
+        color: #fff
+        +res('tam')
+            font-size: 16px
+
+// buttons
+.rect_btn
+    width: 280px
+    height: 82px
+    max-width: 100%
+    display: block
+    margin: 0 auto
+    position: relative
+    z-index: 1
+    color: #ffffff
+    font: 11px $semi
+    text-transform: uppercase
+    letter-spacing: 1.5px
+    &__balls
+        height: 100%
+        width: 100vw
+        left: 50%
+        margin-left: -50vw
+        top: 0px
+    +res('desk-min')
+        &:hover
+            &:before
+                transform: scaleY(.65)
+    span
+        width: 100%
+        height: 100%
+        +flex(row, wrap, center, center)
+        z-index: 2
+        position: relative
+    &:before
+        background-color: #262626
+        position: absolute
+        top: 0px
+        left: 0px
+        height: 100%
+        width: 100%
+        content: ''
+        transition: .3s
+        z-index: 1
+    &--green
+        &:before
+            background: $green
+    .icon-button-shape-left, .icon-button-shape-right
+        position: absolute
+        z-index: -1
+        top: 50%
+        margin-top: -7.5px
+        width: 243px
+        height: 19px
+    .icon-button-shape-left
+        right: 100%
+        margin-right: -20px
+    .icon-button-shape-right
+        left: 100%
+
+// Breadcrumbs
+.breadcrumb
+    ul
+        margin: 0 -20px
+        +flex(row, wrap, flex-start, flex-start)
+    li
+        color: rgba(255, 255, 255, .4)
+        font: 11px $light
+        line-height: 20px
+        letter-spacing: 0.33px
+        padding: 0 20px
+        position: relative
+        &:last-child
+            &:after
+                display: none
+        &:after
+            position: absolute
+            content: ''
+            background: $green
+            width: 5px
+            height: 5px
+            top: 50%
+            margin-top: -2.5px
+            right: -2.5px
+            border-radius: 50%
+
+.uikit
+    &__title
+        //text-align: center
+        color: #333333
+        font: 34px $light
+        line-height: 48px
+        +res('mob')
+            text-align: left
+            font-size: 22px
+            line-height: 32px
+    &__large_title
+        color: #333
+        font: 50px $light
+        width: 790px
+        max-width: 100%
+        +res('mob')
+            width: 100%
+            font-size: 22px
+            line-height: 32px
+    &__paragraph
+        color: #333333
+        font: 15px $light
+        line-height: 28px
+        +res('mob')
+            font-size: 11px
+            line-height: 20px
+
+.link_with_balls
+    color: $green
+    font: 11px $semi
+    text-transform: uppercase
+    letter-spacing: 1.54px
+    transition: .3s
+    display: inline-block
+    +res('tam')
+        margin-right: 20px
+    a
+        position: relative
+        overflow: hidden
+        display: block
+        &>div
+            +flex(row, nowrap, flex-start, center)
+            position: relative
+            transition: .3s
+        svg
+            width: 15px
+            height: 20px
+            stroke: $green
+            margin: 3px 14px 3px 0
+        +res('desk-min')
+            &:hover
+                &>div:not(.hover)
+                    transform: translateY(100%)
+                .hover
+                    transform: translateY(0)
+        span
+            transition: .3s
+            display: block
+        .hover
+            color: #333
+            position: absolute
+            left: 0
+            top: 0
+            right: 0
+            transform: translateY(-100%)
+            width: 100%
+    .drawn_text
+        position: relative
+        padding-right: 30px
+        &__balls_overflow
+            min-height: 30px
+            position: absolute
+            width: 300px
+            left: 100%
+            margin-left: -15px
+            overflow: hidden
+            top: 50%
+            transform: translateY(-50%)
+        &__balls
+            width: 315px
+            margin-left: -105px
+
+.convex_particles
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    z-index: 1
+    height: 100%
+
+.slick-dots
+    text-align: left
+    margin: 0 5px
+    li
+        button
+            &:before
+                font-size: 30px
+                color: $green
+                opacity: 1 !important
+                transition: .3s
+            &.slick-active
+                &:before
+                    color: #262626
+
+[data-scrollbar]
+    .scrollbar-track
+        background: transparent
+        .scrollbar-thumb
+            background: transparent
+            cursor: grab
+            &:active
+                cursor: grabbing
+            &:after
+                width: 1px
+                border-radius: 2px
+                margin: 0 auto
+                left: 0px
+                right: 0px
+                position: absolute
+                top: 0px
+                content: ''
+                height: 100%
+                background: $green
+
+.inline_underline
+    background-image: linear-gradient(to bottom, $green 0%, $green 100%)
+    background-repeat: no-repeat
+    background-size: 0 1px
+    background-position: 0 100%
+    transition: .8s cubic-bezier(0.215, 0.61, 0.355, 1)
+
+
+
+
+

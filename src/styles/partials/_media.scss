@@ -1,0 +1,65 @@
+//tam - должен идти выше чем mob и tab
+//tad - должен идти выше чем tab и desk
+
+$mob: 'mob';
+$mob-p: 'mob-p';
+$mob-l: 'mob-l';
+$tam: 'tam';
+$tab: 'tab';
+$tab-p: 'tab-p';
+$tab-l: 'tab-l';
+$tad: 'tad';
+$desk: 'desk';
+$desk-min: 'desk-min';
+$desk-hd: 'desk-hd';
+$mobile-max: 768px;
+$tablet-max: 1200px;
+$desktop-max: 1600px;
+
+@mixin res($media) {
+    @if $media == $mob {
+        @media only screen and (max-width: $mobile-max - 1) {
+            @content;
+        }
+    } @else if $media == $tab {
+        @media only screen and (min-width: $mobile-max) and (max-width: $tablet-max - 1) {
+            @content;
+        }
+    } @else if $media == $tam {
+        @media only screen and (max-width: $tablet-max - 1) {
+            @content;
+        }
+    } @else if $media == $tab-p {
+        @media only screen and (min-width: $mobile-max) and (max-width: $tablet-max - 1) and (orientation: portrait) {
+            @content;
+        }
+    } @else if $media == $tab-l {
+        @media only screen and (min-width: $mobile-max) and (max-width: $tablet-max - 1) and (orientation: landscape) {
+            @content;
+        }
+    } @else if $media == $tad {
+        @media only screen and (min-width: $mobile-max) {
+            @content;
+        }
+    } @else if $media == $desk {
+        @media only screen and (max-width: $desktop-max - 1) {
+            @content;
+        }
+    } @else if $media == $desk-min {
+        @media only screen and (min-width: $tablet-max) {
+            @content;
+        }
+    } @else if $media == $mob-p {
+        @media only screen and (max-width: $mobile-max - 1) and (orientation: portrait) {
+            @content;
+        }
+    } @else if $media == $mob-l {
+        @media only screen and (max-width: $mobile-max - 1) and (orientation: landscape) {
+            @content;
+        }
+    } @else if $media == $desk-hd {
+        @media only screen and (min-width: $desktop-max) {
+            @content;
+        }
+    }
+}

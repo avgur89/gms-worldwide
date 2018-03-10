@@ -1,0 +1,102 @@
+.footer
+    padding: 40px 0
+    background: #ffffff
+    overflow: hidden
+    +res('mob')
+        padding: 30px 0 20px
+    .header__logo
+        margin: 0
+        +res('mob')
+            display: inline-block
+            margin-bottom: 12px
+            svg
+                width: 140px
+                height: 47px
+    .header__flex
+        padding: 0
+        align-items: flex-start
+        +res('mob')
+            display: block
+            text-align: center
+    &__top
+        //margin-bottom: 25px
+    &__right
+        display: block
+        .header__nav
+            margin: 0 -25.5px 32px
+            +res('tam')
+                display: none
+        .header__nav a
+            color: #333333
+            margin: 5.5px 0
+            font-size: 14px
+    &__content
+        position: relative
+    &__nav
+        +flex(row, wrap, space-between, center)
+        margin: 0 -20px
+        +res('tam')
+            display: block
+            ul
+                justify-content: flex-end
+        +res('mob')
+            ul
+                justify-content: center
+                li
+                    height: 38px
+        li
+            padding: 0 20px
+        a
+            color: #262626
+            font: 9px $semi
+            text-transform: uppercase
+            letter-spacing: 1.54px
+            transition: .3s
+            +res('desk-min')
+                &:hover
+                    color: $green
+        ul
+            +flex(row, wrap, center, center)
+    &__links
+        li
+            +res('tam')
+                +flex(row, wrap, center, center)
+                height: 47px
+
+    &__soc
+
+        li
+            +flex(row, wrap, center, center)
+        a
+            color: $green
+            +res('desk-min')
+                &:hover
+                    color: #333
+        +res('tam')
+            margin-top: 37px
+        +res('mob')
+            margin-top: 0px
+    &__copyright
+        display: inline-block
+        color: #333333
+        font: 11px $light
+        letter-spacing: 0.33px
+        position: absolute
+        bottom: 0
+        left: 0
+        a
+            transition: .3s
+            +res('desk-min')
+                &:hover
+                    color: $green
+        +res('mob')
+            position: relative
+            margin-top: 25px
+            text-align: center
+            width: 100%
+            display: block
+        svg
+            width: 12px
+            height: 16px
+
+

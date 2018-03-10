@@ -1,0 +1,82 @@
+.clients
+    position: relative
+    background: #fff
+    padding: 90px 0 102px
+    overflow: hidden
+    +res('tam')
+        padding: 90px 0 70px
+    +res('mob')
+        padding: 22px 0 40px
+    &__title
+        margin: 0 auto 30px
+        width: 690px
+        max-width: 100%
+        text-align: center
+        +res('mob')
+            margin-bottom: 22px
+            text-align: left
+    &__items
+        .slick-list
+            padding: 3px 3px
+            margin: 0 -5px
+            +res('mob')
+                margin: 0
+        &.slick-dotted.slick-slider
+            margin-bottom: 45px
+        &.animation-done
+            .clients__item
+                &:before, &:after
+                    opacity: 1
+                .img
+                    &:before, &:after
+                        opacity: 1
+        .slick-dots
+            margin: 0 -10px
+            bottom: -42px
+    &__item
+        position: relative
+        +res('tam')
+            opacity: 1!important
+            transform: translate(0px, 0px)!important
+            &:before, &:after
+                opacity: 1!important
+
+        &:before, &:after
+            position: absolute
+            background: #e0e0e0
+            content: ''
+            border-radius: 50%
+            width: 5px
+            height: 5px
+            right: -2.5px
+            transition: .6s
+            opacity: 0
+        &:before
+            top: -2.5px
+        &:after
+            bottom: -2.5px
+        .img
+            +flex(row, wrap, center, center)
+            height: 115px
+            position: relative
+            +res('mob')
+                height: 90px
+            &:before, &:after
+                position: absolute
+                background: #e0e0e0
+                content: ''
+                border-radius: 50%
+                width: 5px
+                height: 5px
+                left: -2.5px
+                transition: .6s
+                opacity: 0
+            &:before
+                top: -2.5px
+            &:after
+                bottom: -2.5px
+            img
+                transform: translateZ(0)
+                max-width: 70%
+                max-height: 60%
+                filter: grayscale(100%)

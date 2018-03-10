@@ -1,0 +1,36 @@
+extends ../extend/default
+
+block variables
+    - var title = 'UiKit';
+block header
+
+block main
+    style.
+        section li {
+            margin: 50px 0
+        }
+
+        section .black-li {
+            background: #2a2a2a;
+            padding: 30px;
+        }
+    main.content(data-page='uikit')
+        section
+            .container
+                ul
+                    li
+                        h3.uikit__title Here is a glance at some of the breakthroughs our clients have achieved
+                    li.black-li
+                        +circle-play('a', 'main-screen-btn', '#')
+                    li
+                        button.rect_btn
+                            span Get in touch
+                            .rect_btn__balls
+                    li
+                        .mad_title
+                            .mad_title__balls
+                            h3.uikit__large_title What we offer
+                    li.black-li
+                        +link-balls('Discover our coverage')(href='#', className='any_class', colorBalls='#fff')
+                    li
+                        p.uikit__paragraph GMS is a global company with strong expertise in messaging services. Pioneers in both A2P and P2P monetization, we strive to become a global messaging leader. By helping clients discover their potential we are constantly expanding and improving our network.

@@ -1,0 +1,54 @@
+.custom-select-container
+    position: relative
+    select
+        visibility: hidden
+        position: absolute
+        height: 0px
+        width: 0px
+        top: 0px
+        left: 0px
+        border: none
+        outline: none
+        touch-action: none
+        line-height: 0px
+        font-size: 0px
+        display: block
+    .custom-select-opener
+        cursor: pointer
+        position: relative
+        display: inline-block
+        &:after
+            position: absolute
+            content: ''
+            left: 0px
+            bottom: 0px
+            height: 1px
+            width: 100%
+            background: $green
+            transform: scaleX(0)
+            transition: .3s
+            transform-origin: 0 50%
+    .custom-select-option
+        cursor: pointer
+        &.is-selected
+            height: 0
+            overflow: hidden
+    .custom-select-panel
+        display: none
+        padding-top: 3px
+        //height: 0
+        overflow: hidden
+        @keyframes fadeUp
+            0%
+                opacity: 0
+                transform: translateY(10px)
+            100%
+                opacity: 1
+                transform: translateY(0)
+    &.is-open
+        .custom-select-opener
+            &:after
+                transform: scaleX(1)
+        .custom-select-panel
+            //display: block
+            //animation: .3s fadeUp forwards

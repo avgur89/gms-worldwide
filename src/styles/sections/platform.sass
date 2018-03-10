@@ -1,0 +1,83 @@
+.platform
+    background-color: #262626
+    padding: 85px 0 76px
+    text-align: center
+    +res('tam')
+        padding: 85px 0 65px
+    +res('mob')
+        padding: 40px 0 45px
+        text-align: left
+    &__title
+        width: 100%
+        color: #fff
+        margin-bottom: 28px
+        position: relative
+        text-align: center
+        +res('mob')
+            margin-bottom: 15px
+        min-height: 70px
+    &__text
+        color: #fff
+        width: 770px
+        margin: 0 auto 30px
+        max-width: 100%
+        line-height: 28.5px
+    &__list
+        +flex(row, nowrap, center, flex-start)
+        +res('mob')
+            display: none
+    &__list_separate
+        padding: 0 13px
+        flex-shrink: 1
+        width: 140px
+        margin-top: 28px
+        +flex(row, nowrap, space-between, center)
+        i
+            width: 5px
+            height: 5px
+            border-radius: 50%
+            background: $green
+    &__link
+        a
+            .hover
+                color: #fff
+                svg
+                    stroke: #fff
+    &__list_item
+        padding: 0 15px
+        text-align: center
+        .ico
+            height: 84px
+        p
+            margin-top: 8px
+            font: 14px $med
+            line-height: 20px
+            text-transform: uppercase
+            letter-spacing: 1.05px
+            color: $green
+        svg
+            fill: $green
+            max-height: 100%
+            display: block
+        .icon-platform_ico1
+            width: 55px
+            height: 77px
+        .icon-platform_ico2
+            width: 92px
+            height: 84px
+        .icon-platform_ico3
+            width: 92px
+            height: 64px
+    &__bottom
+        text-align: right
+        transform: translateY(-100%)
+        font-size: 0px
+        line-height: 0px
+        padding-bottom: 2px
+        +res('tam')
+            transform: translate(0, 0)
+            margin-top: 30px
+        +res('mob')
+            display: block
+            text-align: left
+            margin-top: 32px
